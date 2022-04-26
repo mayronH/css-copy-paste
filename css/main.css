@@ -43,6 +43,8 @@ body {
 .header ul {
     list-style: none;
 
+    text-align: center;
+
     padding: 0;
 
     margin: 0;
@@ -51,7 +53,7 @@ body {
 .header ul li {
     display: inline;
 
-    padding: 0px 4px;
+    padding: 0px 5px;
 }
 
 .header a {
@@ -110,4 +112,20 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
+}
+
+input {
+    background: #555;
+
+    font-size: 18px;
+    color: #fff;
+
+    border: none;
+
+    padding: 8px 15px;
+}
+
+input:focus {
+    outline-color: #f17c0d;
+    outline-style: solid;
 }
