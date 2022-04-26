@@ -22,32 +22,48 @@
         <link rel="stylesheet" href="css/custom-scrollbar.css">
     </head>
     <body>
+        <header class="header">
+            <nav>
+                <ul>
+                    <li><a href="#typing">Typing Effect</a></li>
+                    <li><a href="#dropshadow">Drop Shadow</a></li>
+                    <li><a href="#customcursor">Cursor</a></li>
+                    <li><a href="#truncatetext">Truncate Text</a></li>
+                    <li><a href="#lineclamp">Line Clamp</a></li>
+                    <li><a href="#customselection">Selection</a></li>
+                    <li><a href="#resize">Resize</a></li>
+                    <li><a href="#modal">CSS Modal</a></li>
+                    <li><a href="#empty">:empty</a></li>
+                    <li><a href="#scrollbar">Scrollbar</a></li>
+                </ul>
+            </nav>
+        </header>
         <main class="container">
-            <div class="wrapper">
+            <div class="wrapper" id="typing">
                 <h3>Typing Effect</h3>
                 <div class="typing-demo">Hello World!</div>
             </div>
 
-            <div class="wrapper">
+            <div class="wrapper" id="dropshadow">
                 <h3>Drop Shadow</h3>
                 <img class="drop-shadow" src="https://markodenic.com/man_working.png" alt="Image with drop-shadow" />
             </div>
 
-            <div class="wrapper">
+            <div class="wrapper" id="customcursor">
                 <h3>Custom Cursor</h3>
                 <div class="cursor">Emoji Cursor</div>
             </div>
 
-            <div class="wrapper">
-                <h3>Truncate text</h3>
+            <div class="wrapper" id="truncatetext">
+                <h3>Truncate Text</h3>
                 <div class="box overflow">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam debitis veritatis
                     voluptatem voluptate dolorem quibusdam sequi exercitationem ad!
                 </div>
             </div>
 
-            <div class="wrapper">
-                <h3>Truncate text to the specific number of lines</h3>
+            <div class="wrapper" id="lineclamp">
+                <h3>Truncate Text to the Specific Number of Lines</h3>
                 <div class="box">
                     <p class="line-clamp">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam debitis veritatis
@@ -56,12 +72,12 @@
                 </div>
             </div>
 
-            <div class="wrapper">
-                <h3>Custom color selection</h3>
+            <div class="wrapper" id="customselection">
+                <h3>Custom Color Selection</h3>
                 <div class="custom-selection">Custom text selection with ::selection pseudo-element</div>
             </div>
 
-            <div class="wrapper">
+            <div class="wrapper" id="resize">
                 <h3>Resize Anything</h3>
                 <div class="resize">
                     <p>
@@ -72,12 +88,12 @@
                 </div>
             </div>
 
-            <div class="wrapper">
+            <div class="wrapper" id="modal">
                 <h3>CSS Modal</h3>
                 <a class="button" href="#modal">Open Modal</a>
             </div>
 
-            <div class="wrapper">
+            <div class="wrapper" id="empty">
                 <h3>Empty Elements</h3>
                 <div class="columns">
                     <div class="box"></div>
@@ -85,7 +101,7 @@
                 </div>
             </div>
 
-            <div class="wrapper">
+            <div class="wrapper" id="scrollbar">
                 <h3>Custom Scrollbar</h3>
 
                 <div class="box custom-scrollbar">
