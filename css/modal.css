@@ -1,0 +1,71 @@
+/* CSS Modal */
+.modal {
+    /* Hide the modal with visibility and opacity */
+    visibility: hidden;
+    opacity: 0;
+
+    /* Make the modal centralize and above the page layer  */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    /* Centralize the modal content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Darken the page */
+    background: rgba(0, 0, 0, 0.5);
+
+    /* Smoother transition to the opening and closing of modal */
+    transition: all 0.4s;
+}
+
+/* When the link with #modal is targeted(clicked) this css code takes place, making the modal visible */
+.modal:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* The modal box */
+.modal-content {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    width: 480px;
+    max-width: 90%;
+
+    background: #fff;
+
+    color: #333;
+
+    padding: 15px 25px;
+
+    border-radius: 3px;
+}
+
+.modal-content header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-content h1 {
+    margin: 0;
+}
+
+/* The close button target anything else so the modal:target doesn't work anymore, hidding the modal */
+.modal-content .close {
+    text-decoration: none;
+}
+
+.modal-content main {
+    flex: 1;
+    padding: 15px 0;
+
+    text-align: center;
+}

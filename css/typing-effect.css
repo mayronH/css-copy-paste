@@ -1,0 +1,37 @@
+.typing-demo {
+    /* Animation typing and blink bar */
+    /* Typing duration is 2s */
+    /* Animation timing 12 steps(number of characters) */
+    /* Blink animation duration 0.5s */
+    /* Animation timing 1,end */
+    /* Animation interation infinite */
+    /* Animation direction alternate forward and backward */
+    animation: typing 2s steps(12), blink 0.5s step-end infinite alternate;
+
+    /* Text doesn't wrap to the next line */
+    white-space: nowrap;
+    /* Hide the text that is larger them the box */
+    overflow: hidden;
+
+    /* border blinking bar */
+    border-right: 3px solid;
+
+    /* Font-family monospace make easy to count the number of character with ch measure */
+    font-family: monospace;
+    font-size: 2rem;
+
+    /* number of characters */
+    width: 12ch;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}

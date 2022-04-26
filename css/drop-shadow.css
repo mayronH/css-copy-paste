@@ -1,0 +1,5 @@
+/* Drop-shadow effect */
+.drop-shadow {
+    /* Instead of using box-shadow in images, that generate a rectangular shadow in the image box, drop-shadow generate a shadow in the image */
+    filter: drop-shadow(0px 0px 10px rgba(238, 238, 238, 0.2));
+}

@@ -1,0 +1,39 @@
+/* Custom Scrollbar */
+.custom-scrollbar {
+    overflow: auto;
+    display: inline-block;
+
+    height: 200px;
+}
+
+.box .content {
+    height: 500px;
+
+    text-align: center;
+}
+
+/* The scrollbar itself */
+.custom-scrollbar::-webkit-scrollbar {
+    /* How thick the scrollbar is */
+    width: 12px;
+
+    /* The background bar */
+    background-color: #3f3f3f;
+}
+
+/* The track */
+.custom-scrollbar::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+/* The scrollbar indicator */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+
+    /* The color of the indicator */
+    background-color: #f17c0d;
+
+    /* A little "padding" */
+    border: 2px solid #3f3f3f;
+}

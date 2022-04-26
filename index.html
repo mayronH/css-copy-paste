@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Tips</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/typing-effect.css" />
+        <link rel="stylesheet" href="css/drop-shadow.css" />
+        <link rel="stylesheet" href="css/custom-cursor.css" />
+        <link rel="stylesheet" href="css/truncate-text.css" />
+        <link rel="stylesheet" href="css/custom-selection.css" />
+        <link rel="stylesheet" href="css/resize.css" />
+        <link rel="stylesheet" href="css/modal.css" />
+        <link rel="stylesheet" href="css/empty-element.css">
+        <link rel="stylesheet" href="css/custom-scrollbar.css">
+    </head>
+    <body>
+        <main class="container">
+            <div class="wrapper">
+                <h3>Typing Effect</h3>
+                <div class="typing-demo">Hello World!</div>
+            </div>
+
+            <div class="wrapper">
+                <h3>Drop Shadow</h3>
+                <img class="drop-shadow" src="https://markodenic.com/man_working.png" alt="Image with drop-shadow" />
+            </div>
+
+            <div class="wrapper">
+                <h3>Custom Cursor</h3>
+                <div class="cursor">Emoji Cursor</div>
+            </div>
+
+            <div class="wrapper">
+                <h3>Truncate text</h3>
+                <div class="box overflow">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam debitis veritatis
+                    voluptatem voluptate dolorem quibusdam sequi exercitationem ad!
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <h3>Truncate text to the specific number of lines</h3>
+                <div class="box">
+                    <p class="line-clamp">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam debitis veritatis
+                        voluptatem voluptate dolorem quibusdam sequi exercitationem ad!
+                    </p>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <h3>Custom color selection</h3>
+                <div class="custom-selection">Custom text selection with ::selection pseudo-element</div>
+            </div>
+
+            <div class="wrapper">
+                <h3>Resize Anything</h3>
+                <div class="resize">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis similique explicabo hic
+                        nostrum quia quas, libero eos deleniti quo ipsa iste illum alias reiciendis iusto quasi in
+                        aliquam accusantium. Dolorem?
+                    </p>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <h3>CSS Modal</h3>
+                <a class="button" href="#modal">Open Modal</a>
+            </div>
+
+            <div class="wrapper">
+                <h3>Empty Elements</h3>
+                <div class="columns">
+                    <div class="box"></div>
+                    <div class="box">Hello there!</div>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <h3>Custom Scrollbar</h3>
+
+                <div class="box custom-scrollbar">
+                    <div class="content">
+                        custom scrollbar
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header>
+                    <h1>CSS Modal</h1>
+                    <a href="#" class="close">x</a>
+                </header>
+                <main>
+                    No need for Javascript
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

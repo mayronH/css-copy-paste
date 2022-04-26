@@ -1,0 +1,14 @@
+/* Anything can be resizable */
+.resize {
+    width: 300px;
+
+    background-color: #555;
+
+    padding: 15px;
+
+    /* Resize property make the div resizable */
+    /* Both means resize vertically and horizontally */
+    resize: both;
+    /* Resize doesn't work with overflow visible, should be "hidden" or "scroll" or "auto" */
+    overflow: auto;
+}

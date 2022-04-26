@@ -1,0 +1,24 @@
+/* Truncate Text */
+.overflow {
+    /* Text doesn't wrap to the next line */
+    white-space: nowrap;
+    /* Hide the text that is larger them the box */
+    overflow: hidden;
+
+    /* If any text overflows the box, '...' will be added before the ending of the box. */
+    text-overflow: ellipsis;
+}
+
+/* Truncate Text in a specific number of lines */
+.line-clamp {
+    /* Only works correctly in paragraph */
+    /* display box */
+    display: -webkit-box;
+    /* Line-clamp only works in vertical orientation */
+    -webkit-box-orient: vertical;
+    /* The number of lines */
+    -webkit-line-clamp: 2;
+
+    /* Hide any text that surpass the number of lines in line-clamp */
+    overflow: hidden;
+}
