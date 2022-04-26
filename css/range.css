@@ -1,0 +1,19 @@
+/* Range Input with custom CSS */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    margin-bottom: 10px;
+}
+
+/* If the value is in the range of input type number(min-max) */
+input:in-range {
+    background-color: #37cc8e;
+}
+
+/* If the value is out of range of input type number(min-max) */
+input:out-of-range {
+    background-color: #cc3737;
+}

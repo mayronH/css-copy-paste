@@ -1,0 +1,45 @@
+/* HTML/CSS Tooltip only */
+#tooltip p {
+    position: relative;
+    margin: 0;
+}
+
+.tooltip {
+    color: #f17c0d;
+    text-decoration: underline;
+}
+
+/* Tooltip box */
+.tooltip:before {
+    /* content property sets a content to the :before pseudo-element */
+    /* attr gets the attribute of the .tooltip, in this case the data-tooltip */
+    content: attr(data-tooltip);
+
+    /* Position above the text */
+    position: absolute;
+    bottom: 1.2rem;
+    left: 10%;
+    z-index: 1;
+
+    visibility: hidden;
+    opacity: 0;
+
+    background-color: #f17c0d;
+
+    font-size: 0.75em;
+    color: #fff;
+    text-align: center;
+
+    padding: 8px;
+
+    border-radius: 3px;
+
+    /* Smoother transtion */
+    transition: opacity 0.6s;
+}
+
+/* Hover effect modifying only the :before pseudo-element */
+.tooltip:hover:before {
+    opacity: 1;
+    visibility: visible;
+}

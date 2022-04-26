@@ -18,8 +18,16 @@
         <link rel="stylesheet" href="css/custom-selection.css" />
         <link rel="stylesheet" href="css/resize.css" />
         <link rel="stylesheet" href="css/modal.css" />
-        <link rel="stylesheet" href="css/empty-element.css">
-        <link rel="stylesheet" href="css/custom-scrollbar.css">
+        <link rel="stylesheet" href="css/empty-element.css" />
+        <link rel="stylesheet" href="css/custom-scrollbar.css" />
+        <link rel="stylesheet" href="css/sticky.css" />
+        <link rel="stylesheet" href="css/tooltip.css" />
+        <link rel="stylesheet" href="css/caret.css" />
+        <link rel="stylesheet" href="css/range.css" />
+        <link rel="stylesheet" href="css/fancy.css" />
+        <link rel="stylesheet" href="css/gap.css" />
+        <link rel="stylesheet" href="css/greyscale.css" />
+        <link rel="stylesheet" href="css/gradient-border.css" />
     </head>
     <body>
         <header class="header">
@@ -35,9 +43,18 @@
                     <li><a href="#modal">CSS Modal</a></li>
                     <li><a href="#empty">:empty</a></li>
                     <li><a href="#scrollbar">Scrollbar</a></li>
+                    <li><a href="#sticky">Sticky</a></li>
+                    <li><a href="#tooltip">Tooltips</a></li>
+                    <li><a href="#customcaret">Caret Color</a></li>
+                    <li><a href="#range">Input Range</a></li>
+                    <li><a href="#fancy">Fancy Text</a></li>
+                    <li><a href="#gap">Gap</a></li>
+                    <li><a href="#greyscale">Greyscale</a></li>
+                    <li><a href="#gradient">Gradient Border</a></li>
                 </ul>
             </nav>
         </header>
+
         <main class="container">
             <div class="wrapper" id="typing">
                 <h3>Typing Effect</h3>
@@ -105,10 +122,64 @@
                 <h3>Custom Scrollbar</h3>
 
                 <div class="box custom-scrollbar">
-                    <div class="content">
-                        custom scrollbar
-                    </div>
+                    <div class="content">custom scrollbar</div>
                 </div>
+            </div>
+
+            <div class="wrapper" id="sticky">
+                <h3>Sticky</h3>
+                <div class="box sticky"></div>
+            </div>
+
+            <div class="wrapper" id="tooltip">
+                <h3>HTML/CSS Tooltip</h3>
+                <p>Hover <span class="tooltip" data-tooltip="Hello there!">here</span> to see the tooltip in action</p>
+            </div>
+
+            <div class="wrapper" id="customcaret">
+                <h3>Custom Caret Color</h3>
+                <input type="text" class="caret-color" placeholder="Insert anything" />
+            </div>
+
+            <div class="wrapper" id="range">
+                <h3>::in-range and ::out-range</h3>
+                <form class="form">
+                    <label for="first">Between 1 and 10</label>
+                    <input type="number" name="first" id="first" min="1" max="10" />
+                </form>
+            </div>
+
+            <div class="wrapper" id="fancy">
+                <h3>Fancy Text</h3>
+
+                <h4>Background Clipping</h4>
+            </div>
+
+            <div class="wrapper" id="gap">
+                <h3>Flex Gap</h3>
+                <div class="boxes">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+
+            <div class="wrapper" id="greyscale">
+                <h3>Greyscale Image</h3>
+
+                <div class="images">
+                    <img src="https://picsum.photos/id/69/200/150" alt="Normal Image" />
+                    <img src="https://picsum.photos/id/69/200/150" class="greyscale" alt="Greyscale Image" />
+                </div>
+            </div>
+
+            <div class="wrapper" id="gradient">
+                <h3>Gradient Border</h3>
+
+                <div class="gradient-border">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
             </div>
         </main>
 
@@ -118,9 +189,7 @@
                     <h1>CSS Modal</h1>
                     <a href="#" class="close">x</a>
                 </header>
-                <main>
-                    No need for Javascript
-                </main>
+                <main>No need for Javascript</main>
             </div>
         </div>
     </body>

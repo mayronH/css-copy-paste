@@ -1,0 +1,22 @@
+/* Using background images on text */
+h4 {
+    font-size: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    /* Transparent font */
+    color: transparent;
+
+    /* color as 'callback' and the url of the image */
+    background: #f17c0d url('https://picsum.photos/500/300');
+    /* Background extends underneath the text */
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    margin: 0;
+}
+
+@media (max-width: 425px) {
+    h4 {
+        font-size: 32px;
+    }
+}
