@@ -8,7 +8,7 @@
 }
 
 .boxes .box {
-    background-color: #555;
+    background-color: var(--light-grey);
     width: 60px;
     height: 60px;
 }

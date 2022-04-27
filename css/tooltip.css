@@ -1,11 +1,10 @@
 /* HTML/CSS Tooltip only */
 #tooltip p {
     position: relative;
-    margin: 0;
 }
 
 .tooltip {
-    color: #f17c0d;
+    color: var(--orange);
     text-decoration: underline;
 }
 
@@ -24,7 +23,7 @@
     visibility: hidden;
     opacity: 0;
 
-    background-color: #f17c0d;
+    background-color: var(--orange);
 
     font-size: 0.75em;
     color: #fff;

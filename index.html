@@ -34,18 +34,18 @@
             <nav>
                 <ul>
                     <li><a href="#typing">Typing Effect</a></li>
-                    <li><a href="#dropshadow">Drop Shadow</a></li>
-                    <li><a href="#customcursor">Cursor</a></li>
-                    <li><a href="#truncatetext">Truncate Text</a></li>
-                    <li><a href="#lineclamp">Line Clamp</a></li>
-                    <li><a href="#customselection">Selection</a></li>
+                    <li><a href="#drop_shadow">Drop Shadow</a></li>
+                    <li><a href="#custom_cursor">Cursor</a></li>
+                    <li><a href="#truncate_text">Truncate Text</a></li>
+                    <li><a href="#line_clamp">Line Clamp</a></li>
+                    <li><a href="#custom_selection">Selection</a></li>
                     <li><a href="#resize">Resize</a></li>
-                    <li><a href="#modal">CSS Modal</a></li>
+                    <li><a href="#css_modal">CSS Modal</a></li>
                     <li><a href="#empty">:empty</a></li>
                     <li><a href="#scrollbar">Scrollbar</a></li>
                     <li><a href="#sticky">Sticky</a></li>
                     <li><a href="#tooltip">Tooltips</a></li>
-                    <li><a href="#customcaret">Caret Color</a></li>
+                    <li><a href="#custom_caret">Caret Color</a></li>
                     <li><a href="#range">Input Range</a></li>
                     <li><a href="#fancy">Fancy Text</a></li>
                     <li><a href="#gap">Gap</a></li>
@@ -61,17 +61,23 @@
                 <div class="typing-demo">Hello World!</div>
             </div>
 
-            <div class="wrapper" id="dropshadow">
+            <div class="wrapper" id="drop_shadow">
                 <h3>Drop Shadow</h3>
-                <img class="drop-shadow" src="https://markodenic.com/man_working.png" alt="Image with drop-shadow" />
+                <img
+                    src="images/git-icon-logo-png-transparent.png"
+                    loading="lazy"
+                    class="drop-shadow"
+                    alt="Image with drop-shadow"
+                    height="120"
+                />
             </div>
 
-            <div class="wrapper" id="customcursor">
+            <div class="wrapper" id="custom_cursor">
                 <h3>Custom Cursor</h3>
                 <div class="cursor">Emoji Cursor</div>
             </div>
 
-            <div class="wrapper" id="truncatetext">
+            <div class="wrapper" id="truncate_text">
                 <h3>Truncate Text</h3>
                 <div class="box overflow">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam debitis veritatis
@@ -79,7 +85,7 @@
                 </div>
             </div>
 
-            <div class="wrapper" id="lineclamp">
+            <div class="wrapper" id="line_clamp">
                 <h3>Truncate Text to the Specific Number of Lines</h3>
                 <div class="box">
                     <p class="line-clamp">
@@ -89,14 +95,14 @@
                 </div>
             </div>
 
-            <div class="wrapper" id="customselection">
+            <div class="wrapper" id="custom_selection">
                 <h3>Custom Color Selection</h3>
                 <div class="custom-selection">Custom text selection with ::selection pseudo-element</div>
             </div>
 
             <div class="wrapper" id="resize">
                 <h3>Resize Anything</h3>
-                <div class="resize">
+                <div class="box resize">
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis similique explicabo hic
                         nostrum quia quas, libero eos deleniti quo ipsa iste illum alias reiciendis iusto quasi in
@@ -105,9 +111,19 @@
                 </div>
             </div>
 
-            <div class="wrapper" id="modal">
+            <div class="wrapper" id="css_modal">
                 <h3>CSS Modal</h3>
                 <a class="button" href="#modal">Open Modal</a>
+            </div>
+
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <header>
+                        <h1>CSS Modal</h1>
+                        <a href="#css_modal" class="close">x</a>
+                    </header>
+                    <main>No need for Javascript</main>
+                </div>
             </div>
 
             <div class="wrapper" id="empty">
@@ -136,7 +152,7 @@
                 <p>Hover <span class="tooltip" data-tooltip="Hello there!">here</span> to see the tooltip in action</p>
             </div>
 
-            <div class="wrapper" id="customcaret">
+            <div class="wrapper" id="custom_caret">
                 <h3>Custom Caret Color</h3>
                 <input type="text" class="caret-color" placeholder="Insert anything" />
             </div>
@@ -171,8 +187,13 @@
                 <h3>Greyscale Image</h3>
 
                 <div class="images">
-                    <img src="https://picsum.photos/id/69/200/150" alt="Normal Image" />
-                    <img src="https://picsum.photos/id/69/200/150" class="greyscale" alt="Greyscale Image" />
+                    <img src="https://picsum.photos/id/69/200/150" loading="lazy" alt="Normal Image" />
+                    <img
+                        src="https://picsum.photos/id/69/200/150"
+                        loading="lazy"
+                        class="greyscale"
+                        alt="Greyscale Image"
+                    />
                 </div>
             </div>
 
@@ -183,14 +204,8 @@
             </div>
         </main>
 
-        <div class="modal" id="modal">
-            <div class="modal-content">
-                <header>
-                    <h1>CSS Modal</h1>
-                    <a href="#" class="close">x</a>
-                </header>
-                <main>No need for Javascript</main>
-            </div>
-        </div>
+        <footer>
+            <small>Made with ❤️ by <a href="https://github.com/mayronH">mayronH</a></small>
+        </footer>
     </body>
 </html>

@@ -3,7 +3,7 @@
     width: 100px;
     height: 100px;
 
-    background: #444;
+    background: var(--light-grey);
 
     display: flex;
     justify-content: center;

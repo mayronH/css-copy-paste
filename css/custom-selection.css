@@ -1,7 +1,6 @@
 /* Custom Selection Color */
 .custom-selection::selection {
-    background-color: #f17c0d;
-    color: #eee;
+    background-color: var(--orange);
 }
 
 .custom-selection {

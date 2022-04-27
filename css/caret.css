@@ -1,4 +1,4 @@
 /* Custom Carater Color */
 .caret-color {
-    caret-color: #f17c0d;
+    caret-color: var(--orange);
 }

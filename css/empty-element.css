@@ -1,4 +1,4 @@
 /* The :empty selector styles an element that has no children or no text */
 .box:empty {
-    background: #eee;
+    background: #fff;
 }

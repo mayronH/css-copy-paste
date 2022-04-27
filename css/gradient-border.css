@@ -13,7 +13,7 @@
     box-sizing: border-box;
 
     /* Background to cover the :before pseudo-element */
-    background: #3f3f3f;
+    background: var(--body);
     /* Padding-box counts the content and the padding, leaving the border */
     background-clip: padding-box;
 }

@@ -18,7 +18,7 @@
     width: 12px;
 
     /* The background bar */
-    background-color: #3f3f3f;
+    background-color: var(--scrollbar-track);
 }
 
 /* The track */
@@ -32,8 +32,8 @@
     border-radius: 5px;
 
     /* The color of the indicator */
-    background-color: #f17c0d;
+    background-color: var(--orange);
 
     /* A little "padding" */
-    border: 2px solid #3f3f3f;
+    border: 2px solid var(--orange);
 }
