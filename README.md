@@ -1,7 +1,9 @@
 # CSS Tricks
 
-Some **CSS only** easy tricks. 
-*All the explanation is on the .css files*
+Some **CSS only** easy tricks.
+_All the explanation is on the .css files_
+
+<hr>
 
 <details>
   <summary>Typing Effect</summary>
@@ -10,7 +12,6 @@ Some **CSS only** easy tricks.
 <div class="typing-demo">
     Hello World!
 </div>
-
 ```
 
 ```CSS
@@ -44,40 +45,438 @@ Some **CSS only** easy tricks.
 </details>
 
 <details>
-  <summary>Typing Effect</summary>
+  <summary>Drop Shadow</summary>
 
 ```HTML
-<div class="typing-demo">
-    Hello World!
-</div>
-
+<img
+    src="images/git-icon-logo-png-transparent.png"
+    loading="lazy"
+    class="drop-shadow"
+    alt="Image with drop-shadow"
+    height="120"
+/>
 ```
 
 ```CSS
-.typing-demo {
-    animation: typing 2s steps(12), blink 0.5s step-end infinite alternate;
+.drop-shadow {
+    filter: drop-shadow(0px 0px 8px rgba(238, 238, 238, 0.2));
+}
+```
 
+</details>
+
+<details>
+  <summary>Custom Cursor</summary>
+
+```HTML
+<div class="cursor">
+    Emoji Cursor
+</div>
+```
+
+```CSS
+.cursor {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>"), auto;
+}
+```
+
+</details>
+
+<details>
+  <summary>Truncate Text</summary>
+
+```HTML
+<div class="overflow">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam debitis veritatis
+    voluptatem voluptate dolorem quibusdam sequi exercitationem ad!
+</div>
+```
+
+```CSS
+.overflow {
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
+}
+```
 
-    border-right: 3px solid;
+</details>
 
-    font-family: monospace;
-    font-size: 2rem;
+<details>
+  <summary>Truncate Text to the Specific Number of Lines</summary>
 
-    width: 12ch;
+```HTML
+<p class="line-clamp">
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam debitis veritatis
+    voluptatem voluptate dolorem quibusdam sequi exercitationem ad!
+</p>
+```
+
+```CSS
+.line-clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    
+    overflow: hidden;
+}
+```
+
+</details>
+
+<details>
+  <summary>Custom Color Selection</summary>
+
+```HTML
+<div class="custom-selection">
+    Custom Text Selection
+</div>
+```
+
+```CSS
+.custom-selection::selection {
+    background-color: orange;
+}
+```
+
+</details>
+
+<details>
+  <summary>Rezise</summary>
+
+```HTML
+<div class="resize">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis similique explicabo hic
+        nostrum quia quas, libero eos deleniti quo ipsa iste illum alias reiciendis iusto quasi in
+        aliquam accusantium. Dolorem?
+    </p>
+</div>
+```
+
+```CSS
+.resize {
+    resize: both;
+    overflow: auto;
+}
+```
+
+</details>
+
+<details>
+  <summary>CSS Modal</summary>
+
+```HTML
+<a href="#modal">Open Modal</a>
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <header>
+            <h1>CSS Modal</h1>
+            <a href="#" class="close">x</a>
+        </header>
+        <main>No need for Javascript</main>
+    </div>
+</div>
+```
+
+```CSS
+/* The Modal */
+.modal {
+    visibility: hidden;
+    opacity: 0;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.5);
+
+    transition: all 0.4s;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
+.modal:target {
+    visibility: visible;
+    opacity: 1;
 }
 
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+/* The modal box */
+.modal-content {
+    position: relative;
+
+    width: 480px;
+    max-width: 90%;
+
+    background: white;
+
+    color: black;
+}
+```
+
+</details>
+
+<details>
+  <summary>Empty Elements</summary>
+
+```HTML
+<div class="box"></div>
+<div class="box">Hello there!</div>
+```
+
+```CSS
+.box {
+    background: #000;
+}
+
+.box:empty {
+    background: #fff;
+}
+```
+
+</details>
+
+<details>
+  <summary>Custom Scrollbar</summary>
+
+```HTML
+<div class="custom-scrollbar">
+    <div class="content">custom scrollbar</div>
+</div>
+```
+
+```CSS
+.custom-scrollbar {
+    overflow: auto;
+    display: inline-block;
+
+    height: 200px;
+}
+
+.content {
+    height: 500px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 12px;
+
+    background-color: black;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+
+    background-color: orange;
+
+    border: 2px solid orange;
+}
+```
+
+</details>
+
+<details>
+  <summary>Sticky</summary>
+
+```HTML
+<div class="sticky"></div>
+```
+
+```CSS
+.sticky {
+    position: sticky;
+
+    /* Need a position to work: bottom, top, right, left */
+    bottom: 0;
+}
+```
+
+</details>
+
+<details>
+  <summary>HTML/CSS Tooltip</summary>
+
+```HTML
+<p>Hover <span class="tooltip" data-tooltip="Hello there!">here</span> to see the tooltip in action</p>
+```
+
+```CSS
+p {
+    position: relative;
+}
+
+/* Tooltip box */
+.tooltip:before {
+    content: attr(data-tooltip);
+
+    position: absolute;
+    bottom: 1.2rem;
+    left: 10%;
+    z-index: 1;
+
+    visibility: hidden;
+    opacity: 0;
+
+    background-color: black;
+
+    color: white;
+
+    transition: opacity 0.6s;
+}
+
+.tooltip:hover:before {
+    opacity: 1;
+    visibility: visible;
+}
+```
+
+</details>
+
+<details>
+  <summary>Custom Caret Color</summary>
+
+```HTML
+<input type="text" class="caret-color" placeholder="Insert anything" />
+```
+
+```CSS
+.caret-color {
+    caret-color: orange;
+}
+```
+
+</details>
+
+<details>
+  <summary>::in-range and ::out-range</summary>
+
+```HTML
+<form class="form">
+    <input type="number" name="first" id="first" min="1" max="10" />
+</form>
+```
+
+```CSS
+input:in-range {
+    background-color: #37cc8e;
+}
+
+input:out-of-range {
+    background-color: #cc3737;
+}
+```
+
+</details>
+
+<details>
+  <summary>Fancy Text With Background Clip</summary>
+
+```HTML
+<h4>Background Clipping</h4>
+```
+
+```CSS
+h4 {
+    color: transparent;
+
+    background: orange url('https://picsum.photos/seed/picsum/500/300');
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+```
+
+</details>
+
+<details>
+  <summary>Flex Gap</summary>
+
+```HTML
+<div class="boxes">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+```
+
+```CSS
+.box {
+    background-color: black;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+```
+
+</details>
+
+<details>
+  <summary>Greyscale Image</summary>
+
+```HTML
+<img src="https://picsum.photos/id/69/200/150" class="greyscale" alt="Greyscale Image"/>
+```
+
+```CSS
+.greyscale {
+    filter: grayscale(100%);
+}
+```
+
+</details>
+
+<details>
+  <summary>Gradient Border</summary>
+
+```HTML
+<div class="gradient-border">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+</div>
+```
+
+```CSS
+.gradient-border {
+    padding: 25px 30px;
+
+    border-radius: 10px;
+    border: 5px solid transparent;
+
+    position: relative;
+    box-sizing: border-box;
+
+    background: white;
+    background-clip: padding-box;
+}
+
+.gradient-border::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    margin: -5px;
+
+    border-radius: inherit;
+
+    background: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
 }
 ```
 
