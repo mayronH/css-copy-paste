@@ -1,6 +1,6 @@
 /* Custom Selection Color */
 .custom-selection::selection {
-    background-color: var(--orange);
+    background-color: var(--accent);
 }
 
 .custom-selection {

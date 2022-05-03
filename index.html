@@ -34,6 +34,7 @@
         <header class="header">
             <nav>
                 <ul>
+                    <li><a href="#theme">Light/Dark Mode</a></li>
                     <li><a href="#typing">Typing Effect</a></li>
                     <li><a href="#drop_shadow">Drop Shadow</a></li>
                     <li><a href="#custom_cursor">Cursor</a></li>
@@ -58,6 +59,15 @@
         </header>
 
         <main class="container">
+            <section class="wrapper" id="theme">
+                <h3>Light and Dark Mode</h3>
+                <p>The only trick that have some javascript for the button, but the Dark/Light Themes are just CSS.</p>
+                <br />
+                <button class="button" id="button-theme" role="switch" aria-label="light/dark mode">
+                    Light/Dark Mode
+                </button>
+            </section>
+
             <section class="wrapper" id="typing">
                 <h3>Typing Effect</h3>
                 <div class="typing-demo">Hello World!</div>
@@ -258,6 +268,8 @@
                 </div>
             </section>
         </main>
+
+        <script type="module" src="js/main.js"></script>
 
         <footer>
             <small>Made with ❤️ by <a href="https://github.com/mayronH">mayronH</a></small>

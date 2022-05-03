@@ -1,7 +1,7 @@
 # CSS Tricks
 
 Some **CSS only** easy tricks.
-_All the explanation is on the .css files_
+_All the explanation is on the files_
 
 <hr>
 
@@ -117,7 +117,7 @@ _All the explanation is on the .css files_
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    
+
     overflow: hidden;
 }
 ```
@@ -552,6 +552,97 @@ iframe {
     height: 100%;
     border: 0;
 }
+```
+
+</details>
+
+<details>
+  <summary>Light/Dark Mode</summary>
+
+```CSS
+:root {
+    /* Dark Mode Colors */
+    --text-dark: #fff;
+    --body-dark: #3c3c3c;
+    --header-dark: #333;
+    --footer-dark: #4f4f4f;
+    --shadow-dark: rgba(238, 238, 238, 0.2);
+
+    /* Light Mode Colors */
+    --text-light: #3c3c3c;
+    --body-light: #fff;
+    --header-light: #f4f4f5;
+    --footer-light: #e0ecf3;
+    --shadow-light: rgba(49, 49, 49, 0.2);
+}
+
+/* Load the light/dark mode colors based on the system */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: var(--text-dark);
+        --body: var(--body-dark);
+        --header: var(--header-dark);
+        --footer: var(--footer-dark);
+        --shadow: var(--shadow-dark);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text: var(--text-light);
+        --body: var(--body-light);
+        --header: var(--header-light);
+        --footer: var(--footer-light);
+        --shadow: var(--shadow-light);
+    }
+}
+
+[color-scheme="dark"] {
+    --text: var(--text-dark);
+    --body: var(--body-dark);
+    --header: var(--header-dark);
+    --footer: var(--footer-dark);
+    --shadow: var(--shadow-dark);
+}
+
+[color-scheme="light"] {
+    --text: var(--text-light);
+    --body: var(--body-light);
+    --header: var(--header-light);
+    --footer: var(--footer-light);
+    --shadow: var(--shadow-light);
+}
+```
+
+```JS
+function getCurrentTheme() {
+    let theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    localStorage.getItem("csstricks.theme") ? (theme = localStorage.getItem("csstricks.theme")) : null;
+
+    return theme;
+}
+
+function loadTheme(theme) {
+    const root = document.querySelector(":root");
+    root.setAttribute("color-scheme", `${theme}`);
+}
+
+button.addEventListener("click", () => {
+    let theme = getCurrentTheme();
+
+    if (theme === "dark") {
+        theme = "light";
+    } else {
+        theme = "dark";
+    }
+
+    localStorage.setItem("csstricks.theme", `${theme}`);
+    loadTheme(theme);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+    loadTheme(getCurrentTheme());
+});
 ```
 
 </details>

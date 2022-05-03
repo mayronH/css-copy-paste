@@ -1,11 +1,28 @@
 /* COLORS */
 
 :root {
-    --body: #3c3c3c;
-    --scrollbar-track: #3f3f3f;
-    --orange: #f17c0d;
-    --light-grey: #555;
+    /* Dark Mode Colors */
+    --text-dark: #fff;
+    --body-dark: #3c3c3c;
+    --scrollbar-track-dark: #3f3f3f;
+    --accent-dark: #f17c0d;
+    --light-grey-dark: #555;
+    --header-dark: #333;
+    --footer-dark: #4f4f4f;
+    --shadow-dark: rgba(238, 238, 238, 0.2);
+
+    /* Light Mode Colors */
+    --text-light: #3c3c3c;
+    --body-light: #fff;
+    --scrollbar-track-light: #e9e9e9;
+    --accent-light: #45a2d8;
+    --light-grey-light: #d8d8d8;
+    --header-light: #f4f4f5;
+    --footer-light: #e0ecf3;
+    --shadow-light: rgba(49, 49, 49, 0.2);
 }
+
+/* Color Scheme */
 
 /* GENERAL */
 
@@ -36,14 +53,14 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     border-radius: 5px;
 
-    background-color: #fff;
+    background-color: var(--accent);
 
     border: 2px solid var(--scrollbar-track);
 }
 
 body {
     background: var(--body);
-    color: #fff;
+    color: var(--text);
 
     font-family: "Lato", sans-serif;
 }
@@ -62,7 +79,7 @@ input {
     background: var(--light-grey);
 
     font-size: 18px;
-    color: #fff;
+    color: var(--text);
 
     border: none;
 
@@ -70,7 +87,7 @@ input {
 }
 
 input:focus {
-    outline-color: var(--orange);
+    outline-color: var(--accent);
     outline-style: solid;
 }
 
@@ -115,6 +132,7 @@ input:focus {
 
     padding: 1rem;
 
+    border: none;
     border-radius: 3px;
 }
 
@@ -130,8 +148,8 @@ input:focus {
 .header {
     padding: 12px 25px;
 
-    background-color: #333;
-    border-bottom: 1px solid var(--orange);
+    background-color: var(--header);
+    border-bottom: 1px solid var(--accent);
 
     position: fixed;
     top: 0;
@@ -151,7 +169,7 @@ input:focus {
 }
 
 .header a {
-    color: #fff;
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -163,11 +181,11 @@ footer {
 
     padding: 25px 0;
 
-    background: #4f4f4f;
+    background: var(--footer);
 }
 
 footer a {
-    color: var(--orange);
+    color: var(--accent);
     text-decoration: none;
 }
 
@@ -177,4 +195,55 @@ footer a {
     .container {
         margin: 15px;
     }
+}
+
+/* Load the light/dark mode colors based on the system */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text: var(--text-dark);
+        --body: var(--body-dark);
+        --scrollbar-track: var(--scrollbar-track-dark);
+        --accent: var(--accent-dark);
+        --light-grey: var(--light-grey-dark);
+        --header: var(--header-dark);
+        --footer: var(--footer-dark);
+        --shadow: var(--shadow-dark);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text: var(--text-light);
+        --body: var(--body-light);
+        --scrollbar-track: var(--scrollbar-track-light);
+        --accent: var(--accent-light);
+        --light-grey: var(--light-grey-light);
+        --header: var(--header-light);
+        --footer: var(--footer-light);
+        --shadow: var(--shadow-light);
+    }
+}
+
+/* Root variables for the dark/light themes */
+
+[color-scheme="dark"] {
+    --text: var(--text-dark);
+    --body: var(--body-dark);
+    --scrollbar-track: var(--scrollbar-track-dark);
+    --accent: var(--accent-dark);
+    --light-grey: var(--light-grey-dark);
+    --header: var(--header-dark);
+    --footer: var(--footer-dark);
+    --shadow: var(--shadow-dark);
+}
+
+[color-scheme="light"] {
+    --text: var(--text-light);
+    --body: var(--body-light);
+    --scrollbar-track: var(--scrollbar-track-light);
+    --accent: var(--accent-light);
+    --light-grey: var(--light-grey-light);
+    --header: var(--header-light);
+    --footer: var(--footer-light);
+    --shadow: var(--shadow-light);
 }

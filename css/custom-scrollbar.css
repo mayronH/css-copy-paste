@@ -32,8 +32,8 @@
     border-radius: 5px;
 
     /* The color of the indicator */
-    background-color: var(--orange);
+    background-color: var(--accent);
 
     /* A little "padding" */
-    border: 2px solid var(--orange);
+    border: 2px solid var(--accent);
 }

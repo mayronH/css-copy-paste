@@ -4,7 +4,7 @@
 }
 
 .tooltip {
-    color: var(--orange);
+    color: var(--accent);
     text-decoration: underline;
 }
 
@@ -23,7 +23,7 @@
     visibility: hidden;
     opacity: 0;
 
-    background-color: var(--orange);
+    background-color: var(--accent);
 
     font-size: 0.75em;
     color: #fff;
