@@ -125,6 +125,39 @@ _All the explanation is on the files_
 </details>
 
 <details>
+  <summary>Custom List</summary>
+
+```HTML
+<ul>
+    <li>First Item</li>
+    <li>Second Item</li>
+    <li>Third Item</li>
+</ul>
+```
+
+```CSS
+ul {
+    margin: 0 0 0 2em;
+    padding: 0;
+
+    display: grid;
+    grid-gap: 1.25rem;
+}
+li {
+    line-height: 1.25rem;
+
+    padding-left: 0.5rem;
+}
+li::marker {
+    content: "⯈";
+    color: var(--accent);
+    font-size: 1.25em;
+}
+```
+
+</details>
+
+<details>
   <summary>Custom Color Selection</summary>
 
 ```HTML

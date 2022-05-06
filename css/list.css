@@ -1,0 +1,26 @@
+/* Custom List Style */
+
+.custom-list ul {
+    /* Better align */
+    margin: 0 0 0 2em;
+    padding: 0;
+
+    /* Better spacing to each list item */
+    display: grid;
+    grid-gap: 1.25rem;
+}
+
+.custom-list li {
+    line-height: 1.25rem;
+
+    /* Giving a space to the text */
+    padding-left: 0.5rem;
+}
+
+/* Creating the list marker with ::marker */
+.custom-list li::marker {
+    /* Passing the custom marker with content */
+    content: "⯈";
+    color: var(--accent);
+    font-size: 1.25em;
+}
