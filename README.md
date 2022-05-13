@@ -679,3 +679,31 @@ window.addEventListener("DOMContentLoaded", () => {
 ```
 
 </details>
+
+<details>
+  <summary>@supports</summary>
+
+```HTML
+<div class="background-image">
+    <div class="box blur">
+        <p>Support to all browsers</p>
+    </div>
+</div>
+```
+
+```CSS
+.blur {
+    background: rgba(49, 49, 49, 0.2);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+@supports (not (backdrop-filter: blur())) and (not (-webkit-backdrop-filter: blur())) {
+    .blur {
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+```
+
+</details>

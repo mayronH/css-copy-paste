@@ -197,6 +197,12 @@ footer a {
     }
 }
 
+@media screen and (max-width: 320px) {
+    .box {
+        width: 200px;
+    }
+}
+
 /* Load the light/dark mode colors based on the system */
 @media (prefers-color-scheme: dark) {
     :root {
