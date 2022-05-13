@@ -6,6 +6,7 @@
     /* Animation timing 1,end */
     /* Animation interation infinite */
     /* Animation direction alternate forward and backward */
+    -webkit-animation: typing 2s steps(12), blink 0.5s step-end infinite alternate;
     animation: typing 2s steps(12), blink 0.5s step-end infinite alternate;
 
     /* Text doesn't wrap to the next line */
@@ -24,9 +25,21 @@
     width: 12ch;
 }
 
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
 @keyframes typing {
     from {
         width: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+        border-color: transparent;
     }
 }
 

@@ -1,4 +1,7 @@
 /* Custom Selection Color */
+.custom-selection::-moz-selection {
+    background-color: var(--accent);
+}
 .custom-selection::selection {
     background-color: var(--accent);
 }

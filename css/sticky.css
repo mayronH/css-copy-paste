@@ -2,6 +2,7 @@
 /* The sticky depends of the user's scroll position */
 /* The position is relative until the position bottom: 0 is met in the viewport, then the position is fixed at the bottom */
 .sticky {
+    position: -webkit-sticky;
     position: sticky;
     /* Need a position to work: bottom, top, right, left */
     bottom: 0;

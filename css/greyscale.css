@@ -14,5 +14,6 @@
 
 .greyscale {
     /* Apply filter to the image */
+    -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
