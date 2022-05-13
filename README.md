@@ -707,3 +707,86 @@ window.addEventListener("DOMContentLoaded", () => {
 ```
 
 </details>
+
+<details>
+  <summary>CSS One Liner</summary>
+
+```CSS
+/* .modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+} */
+
+.modal{
+    position: fixed;
+    inset: 0;
+}
+```
+
+```CSS
+/* .video-wrapper {
+    position: relative;
+    padding-bottom: 56.15%;
+    height: 0;
+    overflow: hidden;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+} */
+
+.video-wrapper{
+    aspect-ratio: 16/9;
+}
+```
+
+```CSS
+/* .button:hover,
+.button:focus,
+.button:focus-visible {
+    background: black;
+} */
+
+.button:is(:hover, :focus, :focus-visible) {
+    background: black;
+}
+```
+
+```CSS
+/* .title{
+    font-size: 1rem
+}
+
+@media only screen and (min-width: 600px) {
+    .title{
+        font-size: 1rem
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .title{
+        font-size: 6rem
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    .title{
+        font-size: 8rem
+    }
+} */
+
+.title{
+    font-size: 1rem;
+    font-size: clamp(1rem, 10vh + 1rem, 8rem);
+}
+```
+
+</details>
