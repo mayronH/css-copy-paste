@@ -790,3 +790,68 @@ iframe {
 ```
 
 </details>
+
+<details>
+  <summary>Table Responsive</summary>
+
+```HTML
+<table class="table">
+    <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Profession</th>
+        <th>Dead/Alive</th>
+        <th>Birthplace</th>
+        <th>First Movie</th>
+        <th>Last Movie</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-label="First Name">Anakin</td>
+            <td data-label="Last Name">Skywalker</td>
+            <td data-label="Profession">Jedi Not Master</td>
+            <td data-label="Dead/Alive">Dead</td>
+            <td data-label="Birthplace">Tatooine</td>
+            <td data-label="First Movie">The Phantom Menance</td>
+            <td data-label="Last Movie">Revenge of the Sith</td>
+        </tr>
+        <tr>
+            <td data-label="First Name">Luke</td>
+            <td data-label="Last Name">Skywalker</td>
+            <td data-label="Profession">Jedi Master</td>
+            <td data-label="Dead/Alive">Alive</td>
+            <td data-label="Birthplace">Tatooine</td>
+            <td data-label="First Movie">A New Hope</td>
+            <td data-label="Last Movie">Return of the Jedi</td>
+        </tr>
+    </tbody>
+<table>
+```
+
+```CSS
+@media screen and (max-width: 600px) {
+    .table thead {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        margin: -1px;
+        padding: 0px
+        overflow: hidden;
+        height: 1px;
+        width: 1px;
+    }
+    .table tr {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .table td {
+        display: block;
+        text-align: right;
+    }
+
+    .table td::before {
+        content: attr(data-label);
+        float: left;
+    }
+}
+```

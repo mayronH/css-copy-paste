@@ -31,6 +31,7 @@
         <link rel="stylesheet" href="css/video.css" />
         <link rel="stylesheet" href="css/list.css" />
         <link rel="stylesheet" href="css/support.css" />
+        <link rel="stylesheet" href="css/table.css" />
     </head>
     <body>
         <header class="header">
@@ -58,6 +59,7 @@
                     <li><a href="#gradient">Gradient Border</a></li>
                     <li><a href="#video">Embed Video</a></li>
                     <li><a href="#support">@Supports</a></li>
+                    <li><a href="#table">Table Responsive</a></li>
                 </ul>
             </nav>
         </header>
@@ -290,6 +292,60 @@
                         <p>Support to all browsers</p>
                     </div>
                 </div>
+            </section>
+
+            <section class="table-wrapper wrapper" id="table">
+                <h3>Table Responsive</h3>
+                <table class="table">
+                    <!-- 7,8,9 doesn't count -->
+                    <thead>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Profession</th>
+                        <th>Dead/Alive</th>
+                        <th>Birthplace</th>
+                        <th>First Movie</th>
+                        <th>Last Movie</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="First Name">Anakin</td>
+                            <td data-label="Last Name">Skywalker</td>
+                            <td data-label="Profession">Jedi Not Master</td>
+                            <td data-label="Dead/Alive">Dead</td>
+                            <td data-label="Birthplace">Tatooine</td>
+                            <td data-label="First Movie">The Phantom Menance</td>
+                            <td data-label="Last Movie">Revenge of the Sith</td>
+                        </tr>
+                        <tr>
+                            <td data-label="First Name">Luke</td>
+                            <td data-label="Last Name">Skywalker</td>
+                            <td data-label="Profession">Jedi Master</td>
+                            <td data-label="Dead/Alive">Alive</td>
+                            <td data-label="Birthplace">Tatooine</td>
+                            <td data-label="First Movie">A New Hope</td>
+                            <td data-label="Last Movie">Return of the Jedi</td>
+                        </tr>
+                        <tr>
+                            <td data-label="First Name">Padme</td>
+                            <td data-label="Last Name">Amidala</td>
+                            <td data-label="Profession">Politician</td>
+                            <td data-label="Dead/Alive">Dead</td>
+                            <td data-label="Birthplace">Naboo</td>
+                            <td data-label="First Movie">The Phantom Menance</td>
+                            <td data-label="Last Movie">Revenge of the Sith</td>
+                        </tr>
+                        <tr>
+                            <td data-label="First Name">Leia</td>
+                            <td data-label="Last Name">Organa</td>
+                            <td data-label="Profession">General Princess</td>
+                            <td data-label="Dead/Alive">Alive</td>
+                            <td data-label="Birthplace">Alderan</td>
+                            <td data-label="First Movie">A New Hope</td>
+                            <td data-label="Last Movie">Return of the Jedi</td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
         </main>
 
