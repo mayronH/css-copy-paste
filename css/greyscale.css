@@ -6,12 +6,6 @@
     gap: 15px;
 }
 
-/* Responsive image, scale down */
-.images img {
-    max-width: 100%;
-    height: auto;
-}
-
 .greyscale {
     /* Apply filter to the image */
     -webkit-filter: grayscale(100%);

@@ -26,10 +26,21 @@
 
 /* GENERAL */
 
+/* CSS Reset */
+
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+img {
+    /* Responsive image */
+    max-width: 100%;
+    display: block;
+}
+
+/* End of Reset */
 
 html {
     scroll-behavior: smooth;
