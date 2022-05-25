@@ -789,6 +789,19 @@ iframe {
 }
 ```
 
+```CSS
+/* .grid {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+*/
+.grid {
+    display: grid;
+    place-items: center;
+}
+```
+
 </details>
 
 <details>
