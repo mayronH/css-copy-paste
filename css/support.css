@@ -1,7 +1,10 @@
 /* Support all browsers with @supports */
 .background-image {
     background: var(--accent) url("https://picsum.photos/seed/hi/500/300");
-    padding: 40px;
+
+    /* Using min to acknowledge zoom and small size windows */
+    /* the left/right padding will be 40px for most sizes but when is too small the size will be 3 * 1% of the view width */
+    padding: min(40px, 3vw);
 }
 
 .blur {
@@ -22,11 +25,5 @@
 @supports (not (backdrop-filter: blur())) and (not (-webkit-backdrop-filter: blur())) {
     .blur {
         background: rgba(255, 255, 255, 0.5);
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .background-image {
-        padding: 20px;
     }
 }

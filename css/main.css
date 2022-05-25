@@ -94,7 +94,7 @@ input {
 
     border: none;
 
-    padding: 8px 15px;
+    padding: 8px min(15px, 3vw);
 }
 
 input:focus {
@@ -221,6 +221,16 @@ footer a {
 @media screen and (max-width: 768px) {
     .container {
         margin: 15px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .header {
+        position: relative;
+    }
+
+    .container {
+        padding: 25px 0;
     }
 }
 
