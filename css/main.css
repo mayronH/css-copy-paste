@@ -133,18 +133,34 @@ input:focus {
 }
 
 .button {
-    color: #3c3c3c;
+    color: var(--text);
     font-weight: 600;
     text-align: center;
     text-decoration: none;
     text-transform: capitalize;
 
-    background: #e3eee3;
+    background: var(--accent);
 
     padding: 1rem;
 
     border: none;
     border-radius: 3px;
+
+    transition: transform 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-0.2rem) scale(1.2);
+}
+
+.button:focus-visible,
+a:focus-visible {
+    outline: 1px solid var(--accent);
+    outline-offset: 0.2rem;
+}
+
+.button:focus:not(:focus-visible) {
+    outline: none;
 }
 
 .columns {

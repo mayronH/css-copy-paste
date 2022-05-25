@@ -1,0 +1,24 @@
+/* Focus and Focus Visible */
+
+/* Focus appears when a item is in focus, when is used. In a button is when the user clicks it or using tab */
+#focus .button:focus {
+    /* The "border" that the browser uses by default can be customize with outline */
+    outline: 2px solid var(--text);
+}
+
+/* Focus Visible only apply when someone use the keyboard to navigate */
+/* We can disable the default browser behaviour with mouse users and still provide accessibility to keyboard users */
+#focus .button:focus-visible {
+    outline: 2px dashed var(--text);
+    /* The offset negative create the outline inside the button */
+    outline-offset: -0.2rem;
+}
+
+/* Not all browsers supports the focus-visible, so with this rule we can disable the default behaviour only in browsers that support focus-visible, maintaining the accessibility */
+#focus .button:focus:not(:focus-visible) {
+    outline: 2px solid var(--text);
+}
+
+#focus .button:hover {
+    transform: none;
+}

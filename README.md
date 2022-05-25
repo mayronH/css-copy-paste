@@ -855,3 +855,23 @@ iframe {
     }
 }
 ```
+</details>
+
+<details>
+  <summary>Focus Visible and Focus</summary>
+
+```HTML
+<button class="button">Tab me</button>
+```
+
+```CSS
+.button:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.button:focus-visible {
+    outline: 2px dashed orange;
+    outline-offset: 0.2rem;
+}
+```
+</details>
