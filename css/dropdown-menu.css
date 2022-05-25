@@ -1,0 +1,137 @@
+/* Dropdown Menu CSS Only */
+#dropdown {
+    width: 100%;
+}
+
+#dropdown a {
+    color: var(--text);
+    text-align: center;
+    text-decoration: none;
+}
+
+#dropdown nav {
+    background-color: var(--header);
+
+    display: grid;
+    /* align-items: center;
+    justify-items: center; */
+    /* short version of align-items and justify-items */
+    place-items: center;
+
+    padding: 1.25rem 2rem;
+
+    margin-top: 2rem;
+
+    width: 100%;
+}
+
+#dropdown ul {
+    /* Reseting the default list style */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    /* Using the display grid to both make the menu horizontal and the dropdown vertical */
+    display: grid;
+}
+
+/* The ul that is not the dropdown menu is column(horizontal) */
+#dropdown > nav > ul {
+    grid-auto-flow: column;
+}
+
+#dropdown li {
+    padding: 0;
+}
+
+/* Giving lateral margin to all li that is not inside the dropdown */
+#dropdown > nav > ul > li {
+    margin: 0 0.5rem;
+}
+
+.dropdown-title {
+    /* Reseting the button style to be visible like a normal link */
+    font-size: 1rem;
+    color: var(--text);
+    font-family: inherit;
+
+    background-color: transparent;
+
+    border: none;
+
+    /* Centralizing the after content */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.dropdown-title::after {
+    content: "";
+
+    /* Arrow down */
+    /* transparent border to left-bottom-right */
+    /* easiest way to create an arrow */
+    border: 0.25rem solid transparent;
+    border-top-color: var(--text);
+
+    transform: translateY(0.15rem);
+}
+
+/* Position relative for using position absolute in the menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    /* Centralizing the dropdown menu */
+    /* First making the left corner of the box in the middle(50%) of the "Movies" button */
+    left: 50%;
+    /* Then shifting horizontally -50% of the start position */
+    /* transform: translateX(-50%); */
+
+    background-color: var(--header);
+
+    box-shadow: 0px 3px 4px var(--shadow);
+
+    border-top: 5px solid var(--accent);
+
+    padding: 0.5rem 0;
+
+    /* Min width of 20 characters */
+    min-width: 20ch;
+
+    /* Hiding the element with opacity 0 and rotateX -90deg */
+    /* The rotateX -90deg give the element height 0 */
+    transform: rotateX(-90deg) translateX(-50%);
+    /* Change the default behaviour of the transform vertically to be top and not center */
+    /* With that the animation looks like the menu is descending from the button, without it the animation will start in the middle of the dropdown looking like the menu is spawned from a black hole */
+    transform-origin: top center;
+
+    opacity: 0;
+    /* Specifying that the dropdown is not visible for accessibility */
+    visibility: hidden;
+
+    /* Transition to the animation, 120ms is the delay to start the animation */
+    /* With a slight delay we can prevent that the menu is open when we just accidentally pass the mouse above him */
+    transition: 0.3s all 120ms ease-out;
+}
+
+#dropdown > nav > ul > li > a {
+    display: inline-block;
+}
+
+.dropdown-menu a {
+    /* without the display block the vertical padding doesn't work properly */
+    display: block;
+
+    padding: 0.5rem;
+}
+
+/* focus-within permits that the dropdown stays visible even when the focus is switched from the button to the links inside the menu */
+.dropdown:is(:hover, :focus-within) .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform: rotateX(0) translateX(-50%);
+}

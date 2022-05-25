@@ -888,3 +888,126 @@ iframe {
 }
 ```
 </details>
+
+<details>
+  <summary>CSS Only Dropdown Menu</summary>
+
+```HTML
+<nav aria-label="Dropwndown Example">
+    <ul>
+        <li>
+            <a href="#">Home</a>
+        </li>
+        <li class="dropdown">
+            <button
+                type="button"
+                class="dropdown-title"
+                aria-expanded="false"
+                aria-controls="movies_dropdown"
+            >
+                Movies
+            </button>
+            <ul class="dropdown-menu" id="movies_dropdown">
+                <li><a href="#">Return of the Jedi</a></li>
+                <li><a href="#">Empire Strikes Back</a></li>
+                <li><a href="#">A New Hope</a></li>
+                <li><a href="#">Revenge of the Sith</a></li>
+                <li><a href="#">Attack of the Clones</a></li>
+                <li><a href="#">Phantom Menance</a></li>
+            </ul>
+        </li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+```
+
+```CSS
+nav {
+    display: grid;
+    place-items: center;
+
+    padding: 1.25rem 2rem;
+
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+}
+
+nav > ul {
+    grid-auto-flow: column;
+}
+
+nav > ul > li {
+    margin: 0 0.5rem;
+}
+
+nav > ul > li > a {
+    display: inline-block;
+}
+
+.dropdown-title {
+    font-family: inherit;
+
+    background-color: transparent;
+
+    border: none;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.dropdown-title::after {
+    content: "";
+
+    border: 0.25rem solid transparent;
+    border-top-color: var(--text);
+
+    transform: translateY(0.15rem);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    left: 50%;
+
+    background-color: white;
+
+    box-shadow: 0px 3px 4px rgba(black, 0.2);
+
+    padding: 0.5rem 0;
+
+    min-width: 20ch;
+
+    transform: rotateX(-90deg) translateX(-50%);
+    transform-origin: top center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s all 120ms ease-out;
+}
+
+.dropdown:is(:hover, :focus-within) .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    
+    transform: rotateX(0) translateX(-50%);
+}
+
+.dropdown-menu a {
+    display: block;
+
+    padding: 0.5rem;
+}
+```
+</details>

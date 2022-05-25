@@ -32,8 +32,9 @@
         <link rel="stylesheet" href="css/list.css" />
         <link rel="stylesheet" href="css/support.css" />
         <link rel="stylesheet" href="css/table.css" />
-        <link rel="stylesheet" href="css/clamp.css">
-        <link rel="stylesheet" href="css/focus.css">
+        <link rel="stylesheet" href="css/clamp.css" />
+        <link rel="stylesheet" href="css/focus.css" />
+        <link rel="stylesheet" href="css/dropdown-menu.css" />
     </head>
     <body>
         <header class="header">
@@ -49,6 +50,7 @@
                     <li><a href="#custom_selection">Selection</a></li>
                     <li><a href="#resize">Resize</a></li>
                     <li><a href="#css_modal">CSS Modal</a></li>
+                    <li><a href="#dropdown">CSS Dropdown</a></li>
                     <li><a href="#empty">:empty</a></li>
                     <li><a href="#scrollbar">Scrollbar</a></li>
                     <li><a href="#sticky">Sticky</a></li>
@@ -158,6 +160,42 @@
                     <main>No need for Javascript</main>
                 </div>
             </div>
+
+            <section class="wrapper" id="dropdown">
+                <h3>Dropdown Menu CSS Only</h3>
+                <p>Javascript is not needed, but is the best choice to improve accessibility</p>
+
+                <!-- accessibility properties -->
+                <!-- aria-label to indentify the purpose of the navigation -->
+                <!-- aria-expanded to tell if the target(the dropdown menu) is open or not -->
+                <!-- aria-controls tells what the button is controlling(dropdown menu) -->
+                <nav aria-label="Dropwndown Example">
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <button
+                                type="button"
+                                class="dropdown-title"
+                                aria-expanded="false"
+                                aria-controls="movies_dropdown"
+                            >
+                                Movies
+                            </button>
+                            <ul class="dropdown-menu" id="movies_dropdown">
+                                <li><a href="#">Return of the Jedi</a></li>
+                                <li><a href="#">Empire Strikes Back</a></li>
+                                <li><a href="#">A New Hope</a></li>
+                                <li><a href="#">Revenge of the Sith</a></li>
+                                <li><a href="#">Attack of the Clones</a></li>
+                                <li><a href="#">Phantom Menance</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
+            </section>
 
             <section class="wrapper" id="empty">
                 <h3>Empty Elements</h3>
