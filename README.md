@@ -1092,3 +1092,60 @@ select:focus-within {
 }
 ```
 </details>
+
+<details>
+  <summary>CSS Only Select</summary>
+
+```HTML
+<label class="form-control">
+    <input type="checkbox" name="checkbox" />
+    Checkbox
+</label>
+```
+
+```CSS
+.form-control {
+    display: grid;
+    grid-template-columns: 1rem auto;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.form-control input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+
+    font: inherit;
+    color: currentColor;
+
+    width: 1.15rem;
+    height: 1.15rem;
+
+    border: 0.15rem solid currentColor;
+    border-radius: 3px;
+
+    display: grid;
+    place-content: center;
+}
+
+.form-control input::before {
+    content: "";
+
+    width: 0.65rem;
+    height: 0.65rem;
+
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+
+    box-shadow: inset 1rem 1rem var(--accent);
+}
+
+.form-control input:checked::before {
+    transform: scale(1);
+}
+```
+</details>
