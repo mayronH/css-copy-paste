@@ -1011,3 +1011,84 @@ nav > ul > li > a {
 }
 ```
 </details>
+
+<details>
+  <summary>CSS Only Select</summary>
+
+```HTML
+ <div class="select">
+    <select name="custom-select" id="custom_select">
+        <option value="option1">option1</option>
+        <option value="option2">option2</option>
+        <option value="option3">option3</option>
+        <option value="option4">option4</option>
+    </select>
+</div>
+```
+
+```CSS
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+
+    padding: 0 1rem 0 0;
+    margin: 0;
+
+    width: 100%;
+
+    cursor: inherit;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    width: 100%;
+
+    border: 1px solid red;
+    border-radius: 3px;
+
+    padding: 0.5rem;
+
+    cursor: pointer;
+
+    background-color: white;
+
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+}
+
+.select::after {
+    content: "";
+
+    width: 0.8rem;
+    height: 0.5rem;
+
+    background-color: black;
+
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+
+    justify-self: end;
+}
+
+select,
+.select::after {
+    grid-area: select;
+}
+
+select:focus-within {
+    outline: 2px solid blue;
+    outline-offset: 0.5rem;
+}
+```
+</details>

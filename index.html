@@ -35,6 +35,7 @@
         <link rel="stylesheet" href="css/clamp.css" />
         <link rel="stylesheet" href="css/focus.css" />
         <link rel="stylesheet" href="css/dropdown-menu.css" />
+        <link rel="stylesheet" href="css/select.css">
     </head>
     <body>
         <header class="header">
@@ -56,6 +57,7 @@
                     <li><a href="#sticky">Sticky</a></li>
                     <li><a href="#tooltip">Tooltips</a></li>
                     <li><a href="#custom_caret">Caret Color</a></li>
+                    <li><a href="#select">CSS Select</a></li>
                     <li><a href="#range">Input Range</a></li>
                     <li><a href="#fancy">Fancy Text</a></li>
                     <li><a href="#gap">Gap</a></li>
@@ -226,6 +228,19 @@
             <section class="wrapper" id="custom_caret">
                 <h3>Custom Caret Color</h3>
                 <input type="text" class="caret-color" placeholder="Insert anything" />
+            </section>
+
+            <section class="wrapper" id="select">
+                <h3>Custom Select CSS Only</h3>
+                <label for="custom_select">Select Example:</label>
+                <div class="select">
+                    <select name="custom-select" id="custom_select">
+                        <option value="option1">option1</option>
+                        <option value="option2">option2</option>
+                        <option value="option3">option3</option>
+                        <option value="option4">option4</option>
+                    </select>
+                </div>
             </section>
 
             <section class="wrapper" id="range">
