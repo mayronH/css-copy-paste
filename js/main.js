@@ -31,6 +31,14 @@ button.addEventListener('click', () => {
     loadTheme(theme);
 });
 
+const navBtn = document.querySelector('.btn-menu')
+
+navBtn.addEventListener('click', () => {
+    const isExpanded = JSON.parse(navBtn.getAttribute('aria-expanded'))
+
+    navBtn.setAttribute('aria-expanded', !isExpanded)
+})
+
 window.addEventListener('DOMContentLoaded', () => {
     // Load the theme when the DOM is loaded
     loadTheme(getCurrentTheme())

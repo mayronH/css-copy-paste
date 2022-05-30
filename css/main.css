@@ -178,24 +178,72 @@ a:focus-visible {
     background-color: var(--header);
     border-bottom: 1px solid var(--accent);
 
+    width: 100%;
+
     position: fixed;
     top: 0;
     z-index: 99;
 }
 
-.header ul {
+.nav-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    /* position absolute for the mobile */
+    position: absolute;
+    top: 1rem;
+    /* left: 0, right:0 makes the ul occupy the entire width of the screen */
+    left: 0;
+    right: 0;
+    /* the entire nav have z-index of 99 but the links will be bellow everything else inside of the parent(nav) */
+    z-index: -1;
+
+    background-color: var(--header);
+
+    padding: 1.5rem;
+
+    border-bottom: 2px solid var(--accent);
+
+    /* translate3d have better performance, if the browser have GPU accelaration, will use it */
+    /* translate3d(x, y, z) */
+    transform: translate3d(0, -200%, 0);
+
+    transition: transform 0.2s cubic-bezier(0.64, 0.04, 0.26, 0.87);
+
     list-style: none;
 
     text-align: center;
 }
 
-.header li {
+.btn-menu {
+    cursor: pointer;
+
+    color: var(--accent);
+
+    background-color: transparent;
+    border: none;
+
+    /* center the svg */
+    display: grid;
+    place-items: center;
+
+    /* horizontal padding */
+    padding-inline: 1rem;
+}
+
+.btn-menu[aria-expanded="true"] + .nav-links {
+    transform: translate3d(0, 0, 0);
+}
+
+.nav-links li {
     display: inline;
 
     padding: 0px 5px;
 }
 
-.header a {
+.nav-link {
     color: var(--text);
     text-decoration: none;
 }
@@ -224,11 +272,33 @@ footer a {
     }
 }
 
-@media screen and (max-width: 530px) {
-    .header {
-        position: relative;
+@media (min-width: 768px) {
+    .btn-menu {
+        display: none;
     }
 
+    .nav-links {
+        /* reset the position absolute */
+        position: static;
+
+        /* make the menu visible */
+        transform: translate3d(0, 0, 0);
+
+        /* reset every change in the nav-links for desktop */
+        border-bottom: 0;
+        z-index: 0;
+        padding: 0;
+        inset: 0;
+        background-color: transparent;
+    }
+
+    li,
+    .nav-link {
+        width: initial;
+    }
+}
+
+@media screen and (max-width: 530px) {
     .container {
         padding: 25px 0;
     }
@@ -290,3 +360,21 @@ footer a {
     --footer: var(--footer-light);
     --shadow: var(--shadow-light);
 }
+
+/* Disable all animations for people that prefer without it */
+/*
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+*/
