@@ -31,12 +31,22 @@ button.addEventListener('click', () => {
     loadTheme(theme);
 });
 
+// The button to open the menu on mobile
 const navBtn = document.querySelector('.btn-menu')
 
+// Button event to change the aria-expanded attribute for accessibility
 navBtn.addEventListener('click', () => {
+    // the getAttribute return a string so we parse to get a boolean
     const isExpanded = JSON.parse(navBtn.getAttribute('aria-expanded'))
 
     navBtn.setAttribute('aria-expanded', !isExpanded)
+})
+
+// With multiples pages, we can set aria-current page to indicate wich page is loaded for accessibility
+document.querySelectorAll('.nav-link').forEach(link => {
+    if (link.href === window.location.href) {
+        link.setAttribute('aria-current', 'page')
+    }
 })
 
 window.addEventListener('DOMContentLoaded', () => {
