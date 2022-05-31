@@ -802,6 +802,27 @@ iframe {
 }
 ```
 
+```CSS
+/* .padding-vertical {
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.padding-horizontal {
+    padding-left: 10px;
+    padding-right:10px;
+}
+*/
+/* Depends on text orientation */
+.padding-vertical {
+    padding-block: 10px;
+}
+
+.padding-horizontal {
+    padding-inline: 10px;
+}
+```
+
 </details>
 
 <details>
@@ -1094,7 +1115,7 @@ select:focus-within {
 </details>
 
 <details>
-  <summary>CSS Only Select</summary>
+  <summary>Custom Checkbox</summary>
 
 ```HTML
 <label class="form-control">
