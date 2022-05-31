@@ -10,3 +10,5 @@
     /* With 768px of view width the font-size will be 46.72px */
     font-size: clamp(2.5rem, 4vw + 1rem, 6rem);
 }
+
+/* Coding in Public https://www.youtube.com/watch?v=Moely7aPYGE */

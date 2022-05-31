@@ -6,3 +6,5 @@
     /* Resize doesn't work with overflow visible, should be "hidden" or "scroll" or "auto" */
     overflow: auto;
 }
+
+/* https://markodenic.com/css-tips/ */

@@ -2,3 +2,5 @@
 .box:empty {
     background: var(--accent);
 }
+
+/* https://markodenic.com/css-tips/ */

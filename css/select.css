@@ -83,3 +83,5 @@ select:focus-within {
     outline: 2px solid var(--accent);
     outline-offset: 0.5rem;
 }
+
+/* https://markodenic.com/css-tips/ */
