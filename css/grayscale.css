@@ -1,4 +1,4 @@
-/* Greyscale filter */
+/* Grayscale filter */
 .images {
     display: flex;
     flex-wrap: wrap;
@@ -6,7 +6,7 @@
     gap: 15px;
 }
 
-.greyscale {
+.grayscale {
     /* Apply filter to the image */
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);

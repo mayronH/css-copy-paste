@@ -4,7 +4,7 @@
     /* Animation timing 12 steps(number of characters) */
     /* Blink animation duration 0.5s */
     /* Animation timing 1,end */
-    /* Animation interation infinite */
+    /* Animation iteration infinite */
     /* Animation direction alternate forward and backward */
     -webkit-animation: typing 2s steps(12), blink 0.5s step-end infinite alternate;
     animation: typing 2s steps(12), blink 0.5s step-end infinite alternate;

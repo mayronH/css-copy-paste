@@ -26,7 +26,7 @@
 }
 
 #dropdown ul {
-    /* Reseting the default list style */
+    /* Resetting the default list style */
     list-style: none;
     margin: 0;
     padding: 0;
@@ -50,7 +50,7 @@
 }
 
 .dropdown-title {
-    /* Reseting the button style to be visible like a normal link */
+    /* Resetting the button style to be visible like a normal link */
     font-size: 1rem;
     color: var(--text);
     font-family: inherit;
@@ -104,7 +104,7 @@
     /* Hiding the element with opacity 0 and rotateX -90deg */
     /* The rotateX -90deg give the element height 0 */
     transform: rotateX(-90deg) translateX(-50%);
-    /* Change the default behaviour of the transform vertically to be top and not center */
+    /* Change the default behavior of the transform vertically to be top and not center */
     /* With that the animation looks like the menu is descending from the button, without it the animation will start in the middle of the dropdown looking like the menu is spawned from a black hole */
     transform-origin: top center;
 

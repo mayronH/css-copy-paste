@@ -7,14 +7,14 @@
 }
 
 /* Focus Visible only apply when someone use the keyboard to navigate */
-/* We can disable the default browser behaviour with mouse users and still provide accessibility to keyboard users */
+/* We can disable the default browser behavior with mouse users and still provide accessibility to keyboard users */
 #focus .button:focus-visible {
     outline: 2px dashed var(--text);
     /* The offset negative create the outline inside the button */
     outline-offset: -0.2rem;
 }
 
-/* Not all browsers supports the focus-visible, so with this rule we can disable the default behaviour only in browsers that support focus-visible, maintaining the accessibility */
+/* Not all browsers supports the focus-visible, so with this rule we can disable the default behavior only in browsers that support focus-visible, maintaining the accessibility */
 #focus .button:focus:not(:focus-visible) {
     outline: 2px solid var(--text);
 }

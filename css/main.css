@@ -208,7 +208,7 @@ a:focus-visible {
 
     border-bottom: 2px solid var(--accent);
 
-    /* translate3d have better performance, if the browser have GPU accelaration, will use it */
+    /* translate3d have better performance, if the browser have GPU acceleration, will use it */
     /* translate3d(x, y, z) */
     transform: translate3d(0, -200%, 0);
 

@@ -5,7 +5,7 @@
 }
 
 select {
-    /* Reseting the default select apperance */
+    /* Resetting the default select appearance */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;

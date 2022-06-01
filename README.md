@@ -458,14 +458,14 @@ h4 {
 </details>
 
 <details>
-  <summary>Greyscale Image</summary>
+  <summary>Grayscale Image</summary>
 
 ```HTML
-<img src="https://picsum.photos/id/69/200/150" class="greyscale" alt="Greyscale Image"/>
+<img src="https://picsum.photos/id/69/200/150" class="grayscale" alt="Grayscale Image"/>
 ```
 
 ```CSS
-.greyscale {
+.grayscale {
     filter: grayscale(100%);
 }
 ```
@@ -846,7 +846,7 @@ iframe {
             <td data-label="Profession">Jedi Not Master</td>
             <td data-label="Dead/Alive">Dead</td>
             <td data-label="Birthplace">Tatooine</td>
-            <td data-label="First Movie">The Phantom Menance</td>
+            <td data-label="First Movie">The Phantom Menace</td>
             <td data-label="Last Movie">Revenge of the Sith</td>
         </tr>
         <tr>
@@ -914,7 +914,7 @@ iframe {
   <summary>CSS Only Dropdown Menu</summary>
 
 ```HTML
-<nav aria-label="Dropwndown Example">
+<nav aria-label="Dropdown Example">
     <ul>
         <li>
             <a href="#">Home</a>
@@ -934,7 +934,7 @@ iframe {
                 <li><a href="#">A New Hope</a></li>
                 <li><a href="#">Revenge of the Sith</a></li>
                 <li><a href="#">Attack of the Clones</a></li>
-                <li><a href="#">Phantom Menance</a></li>
+                <li><a href="#">Phantom Menace</a></li>
             </ul>
         </li>
         <li><a href="#">About</a></li>

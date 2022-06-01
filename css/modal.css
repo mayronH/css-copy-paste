@@ -54,7 +54,7 @@
     justify-content: space-between;
 }
 
-/* The close button target anything else so the modal:target doesn't work anymore, hidding the modal */
+/* The close button target anything else so the modal:target doesn't work anymore, hiding the modal */
 .modal-content .close {
     text-decoration: none;
 }

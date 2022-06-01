@@ -42,7 +42,7 @@ navBtn.addEventListener('click', () => {
     navBtn.setAttribute('aria-expanded', !isExpanded)
 })
 
-// With multiples pages, we can set aria-current page to indicate wich page is loaded for accessibility
+// With multiples pages, we can set aria-current page to indicate which page is loaded for accessibility
 document.querySelectorAll('.nav-link').forEach(link => {
     if (link.href === window.location.href) {
         link.setAttribute('aria-current', 'page')
