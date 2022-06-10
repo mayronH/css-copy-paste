@@ -364,7 +364,7 @@ footer a {
 }
 
 /* Disable all animations for people that prefer without it */
-/*
+
 @media (prefers-reduced-motion: reduce) {
     html:focus-within {
         scroll-behavior: auto;
@@ -379,4 +379,3 @@ footer a {
         scroll-behavior: auto !important;
     }
 }
-*/
