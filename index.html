@@ -37,6 +37,7 @@
         <link rel="stylesheet" href="/css/dropdown-menu.css" />
         <link rel="stylesheet" href="/css/select.css" />
         <link rel="stylesheet" href="/css/checkbox.css" />
+        <link rel="stylesheet" href="/css/inherit.css" />
     </head>
     <body>
         <header>
@@ -82,6 +83,7 @@
                         <li role="none"><a role="menuitem" class="nav-link" href="#table">Table Responsive</a></li>
                         <li role="none"><a role="menuitem" class="nav-link" href="#clamp">Clamp Font</a></li>
                         <li role="none"><a role="menuitem" class="nav-link" href="#focus">Focus Visible</a></li>
+                        <li role="none"><a role="menuitem" class="nav-link" href="#inherit">Font Inherit</a></li>
                     </ul>
                 </div>
             </nav>
@@ -437,6 +439,14 @@
             <section class="wrapper" id="focus">
                 <h3>Focus vs Focus Visible</h3>
                 <button class="button">Try using Tab and Clicking with Mouse</button>
+            </section>
+
+            <section class="wrapper" id="inherit">
+                <h3>Inherit Font for button/select/input</h3>
+                <div class="buttons">
+                    <button class="button">Button with the default font</button>
+                    <button class="button custom-button">Button with the font used on the body</button>
+                </div>
             </section>
         </main>
 

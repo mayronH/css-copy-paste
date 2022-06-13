@@ -1,0 +1,19 @@
+/* Font inherit */
+
+/* The browser set a default font style for the inputs/buttons/textarea/selects and even with a custom font set on the body, these elements doesn't change automatically, with the inherit we can reset the default behavior */
+
+/* input,
+button,
+textarea,
+select {
+    font: inherit;
+} */
+
+#inherit .button {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.custom-button {
+    font-family: inherit;
+}

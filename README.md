@@ -889,6 +889,7 @@ iframe {
     }
 }
 ```
+
 </details>
 
 <details>
@@ -908,6 +909,7 @@ iframe {
     outline-offset: 0.2rem;
 }
 ```
+
 </details>
 
 <details>
@@ -1021,7 +1023,7 @@ nav > ul > li > a {
 .dropdown:is(:hover, :focus-within) .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    
+
     transform: rotateX(0) translateX(-50%);
 }
 
@@ -1031,6 +1033,7 @@ nav > ul > li > a {
     padding: 0.5rem;
 }
 ```
+
 </details>
 
 <details>
@@ -1112,6 +1115,7 @@ select:focus-within {
     outline-offset: 0.5rem;
 }
 ```
+
 </details>
 
 <details>
@@ -1169,4 +1173,25 @@ select:focus-within {
     transform: scale(1);
 }
 ```
+
+</details>
+
+<details>
+  <summary>Reset input/button/textarea/select</summary>
+
+```HTML
+<input type="text" name="name-input" id="name_input">
+<button>Button with the font used on the body</button>
+
+```
+
+```CSS
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+```
+
 </details>
