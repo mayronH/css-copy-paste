@@ -36,7 +36,19 @@
     box-sizing: border-box;
 }
 
-img {
+body {
+    min-height: 100vh;
+}
+
+/* input,
+button,
+textarea,
+select {
+    font: inherit;
+} */
+
+img,
+picture {
     /* Responsive image */
     max-width: 100%;
     display: block;
@@ -48,13 +60,8 @@ html {
     scroll-behavior: smooth;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 body::-webkit-scrollbar {
-    width: 1rem;
+    width: 0.8rem;
 
     background-color: var(--scrollbar-track);
 }
