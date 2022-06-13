@@ -1,0 +1,33 @@
+/* Text Gradient Outline */
+.outline {
+    position: relative;
+
+    /* We can't use the transparent color to hide the text, we need to set the text as the same color as the body */
+    color: var(--body);
+    text-transform: none;
+    font-weight: 400;
+
+    background: none;
+
+    /* The default way to make an outline text, but doesn't look so great with any value different than 1px */
+    /* -webkit-text-stroke: 1px #fff; */
+
+    /* The outline itself using text-shadow */
+    /* We need the white color to make the gradient look right */
+    text-shadow: -1px -1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+/* The gradient on top of the text */
+.outline:after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
+
+    /* how the element blends with its parent background */
+    /* with mix-blend-mode darken, everything thats white will be substituted with the color of the background */
+    mix-blend-mode: darken;
+}

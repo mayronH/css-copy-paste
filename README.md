@@ -1195,3 +1195,35 @@ select {
 ```
 
 </details>
+
+<details>
+  <summary>Gradient Outline Text</summary>
+
+```HTML
+<h4 class="outline">Lorem ipsum dolor sit.</h4>
+
+```
+
+```CSS
+.outline {
+    position: relative;
+
+    color: var(--body);
+
+    text-shadow: -1px -1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+.outline:after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
+
+    mix-blend-mode: darken;
+}
+```
+
+</details>
