@@ -1227,3 +1227,24 @@ select {
 ```
 
 </details>
+
+<details>
+  <summary>Image Mask</summary>
+
+```HTML
+<img src="https://picsum.photos/id/666/300/300" alt="Image With SVG Mask" />
+
+```
+
+```CSS
+img {
+    aspect-ratio: 1;
+    object-fit: cover;
+
+    mask-image: url(yin-yang-bold.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+```
+
+</details>
