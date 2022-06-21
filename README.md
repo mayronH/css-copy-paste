@@ -1248,3 +1248,22 @@ img {
 ```
 
 </details>
+
+<details>
+  <summary>Disable User Selection</summary>
+
+```HTML
+<div class="no-selection">No selection with user-select CSS property</div>
+
+```
+
+```CSS
+.no-selection {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+```
+
+</details>
