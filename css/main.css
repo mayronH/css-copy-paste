@@ -56,8 +56,19 @@ picture {
 
 /* End of Reset */
 
-html {
-  scroll-behavior: smooth;
+/* Smooth Scrolling */
+
+/* Coding in Public: https://www.youtube.com/watch?v=4FIP7GiNccw */
+@media (prefers-reduced-motion: no-preference) {
+  /* with focus-within the smooth behavior only occurs when scrolling to a element */
+  /* without it, the smooth behavior will occur when we search something with CTRL + F and that's not a good thing for the user */
+  /* The focus-within only works with elements that can be focused like buttons and links, to make it work with div/h1/etc we need tabindex on the element */
+  html:focus-within {
+    scroll-behavior: smooth;
+    /* scroll-padding is the padding left when you scroll to a element on the page */
+    /* vmax = view height/width depend on what is the biggest, on normal PC will be width and on mobile will be height */
+    scroll-padding-top: 8vmax;
+  }
 }
 
 body::-webkit-scrollbar {

@@ -85,3 +85,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // Load the theme when the DOM is loaded
   loadTheme(getCurrentTheme())
 })
+
+// tabindex to make the wrappers focusable
+// value -1 to not interfere with the keyboard navigation
+const divWrappers = [...document.querySelectorAll('.wrapper')]
+divWrappers.forEach((div) => {
+  div.setAttribute('tabindex', '-1')
+})
