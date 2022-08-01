@@ -1,317 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CSS Tips</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tips</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet" />
-    </head>
-    <body>
-        <header>
-            <nav class="header">
-                <div class="nav-wrapper">
-                    <button class="btn-menu" aria-expanded="false" aria-controls="menu" aria-label="open mobile nav">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            stroke-width="2"
-                        >
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                    <ul class="nav-links" id="menu" role="menubar">
-                        <li role="none"><a role="menuitem" class="nav-link" href="#theme">Light/Dark Mode</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#typing">Typing Effect</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#drop_shadow">Drop Shadow</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#custom_cursor">Cursor</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#truncate_text">Truncate Text</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#line_clamp">Line Clamp</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#custom_list">List</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#custom_selection">Custom Selection</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#no_selection">Disable Selection</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#resize">Resize</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#css_modal">CSS Modal</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#dropdown">CSS Dropdown</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#empty">:empty</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#scrollbar">Scrollbar</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#sticky">Sticky</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#tooltip">Tooltips</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#custom_caret">Caret Color</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#select">CSS Select</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#range">Input Range</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#fancy">Fancy Text</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#gap">Gap</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#grayscale">Grayscale</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#gradient">Gradient Border</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#video">Embed Video</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#support">@Supports</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#table">Table Responsive</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#clamp">Clamp Font</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#focus">Focus Visible</a></li>
-                        <li role="none"><a role="menuitem" class="nav-link" href="#inherit">Font Inherit</a></li>
-                        <li role="none">
-                            <a role="menuitem" class="nav-link" href="#outline_text">Gradient Outline Text</a>
-                        </li>
-                        <li role="none">
-                            <a role="menuitem" class="nav-link" href="#mask">Image Mask</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav class="header">
+        <div class="nav-wrapper">
+          <button class="btn-menu" aria-expanded="false" aria-controls="menu" aria-label="open mobile nav">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <ul class="nav-links" id="menu" role="menubar">
+            <li role="none"><a role="menuitem" class="nav-link" href="#theme">Light/Dark Mode</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#typing">Typing Effect</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#drop_shadow">Drop Shadow</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#custom_cursor">Cursor</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#truncate_text">Truncate Text</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#line_clamp">Line Clamp</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#custom_list">List</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#custom_selection">Custom Selection</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#no_selection">Disable Selection</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#resize">Resize</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#css_modal">CSS Modal</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#dropdown">CSS Dropdown</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#empty">:empty</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#scrollbar">Scrollbar</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#sticky">Sticky</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#tooltip">Tooltips</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#custom_caret">Caret Color</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#select">CSS Select</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#range">Input Range</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#fancy">Fancy Text</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#gap">Gap</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#grayscale">Grayscale</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#gradient">Gradient Border</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#video">Embed Video</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#support">@Supports</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#table">Table Responsive</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#clamp">Clamp Font</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#focus">Focus Visible</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#inherit">Font Inherit</a></li>
+            <li role="none">
+              <a role="menuitem" class="nav-link" href="#outline_text">Gradient Outline Text</a>
+            </li>
+            <li role="none">
+              <a role="menuitem" class="nav-link" href="#mask">Image Mask</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-        <main class="container">
-            <section class="wrapper" id="theme">
-                <h3>Light and Dark Mode</h3>
-                <p>The only trick that have some javascript for the button, but the Dark/Light Themes are just CSS.</p>
-                <br />
-                <button class="button" id="button-theme" role="switch" aria-label="light/dark mode">
-                    Light/Dark Mode
-                </button>
-            </section>
+    <main class="container">
+      <section class="wrapper" id="theme">
+        <h3>Light and Dark Mode</h3>
+        <p>The only trick that have some javascript for the button, but the Dark/Light Themes are just CSS.</p>
+        <br />
+        <button class="button" id="button-theme" role="switch" aria-label="light/dark mode">Light/Dark Mode</button>
+      </section>
 
-            <section class="wrapper" id="typing">
-                <h3>Typing Effect</h3>
-                <div class="typing-demo">Hello World!</div>
-            </section>
+      <section class="wrapper" id="typing">
+        <h3>Typing Effect</h3>
+        <div class="typing-demo">Hello World!</div>
+      </section>
 
-            <section class="wrapper" id="drop_shadow">
-                <h3>Drop Shadow</h3>
-                <img
-                    src="images/git-icon-logo-png-transparent.png"
-                    loading="lazy"
-                    class="drop-shadow"
-                    alt="Image with drop-shadow"
-                    height="120"
-                />
-            </section>
+      <section class="wrapper" id="drop_shadow">
+        <h3>Drop Shadow</h3>
+        <img
+          src="images/git-icon-logo-png-transparent.png"
+          loading="lazy"
+          class="drop-shadow"
+          alt="Image with drop-shadow"
+          height="120"
+        />
+      </section>
 
-            <section class="wrapper" id="custom_cursor">
-                <h3>Custom Cursor</h3>
-                <div class="cursor">Emoji Cursor</div>
-            </section>
+      <section class="wrapper" id="custom_cursor">
+        <h3>Custom Cursor</h3>
+        <div class="cursor">Emoji Cursor</div>
+      </section>
 
-            <section class="wrapper" id="truncate_text">
-                <h3>Truncate Text</h3>
-                <div class="box overflow">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam debitis veritatis
-                    voluptatem voluptate dolorem quibusdam sequi exercitationem ad!
-                </div>
-            </section>
+      <section class="wrapper" id="truncate_text">
+        <h3>Truncate Text</h3>
+        <div class="box overflow">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam debitis veritatis voluptatem
+          voluptate dolorem quibusdam sequi exercitationem ad!
+        </div>
+      </section>
 
-            <section class="wrapper" id="line_clamp">
-                <h3>Truncate Text to the Specific Number of Lines</h3>
-                <div class="box">
-                    <p class="line-clamp">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam debitis veritatis
-                        voluptatem voluptate dolorem quibusdam sequi exercitationem ad!
-                    </p>
-                </div>
-            </section>
+      <section class="wrapper" id="line_clamp">
+        <h3>Truncate Text to the Specific Number of Lines</h3>
+        <div class="box">
+          <p class="line-clamp">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat numquam debitis veritatis voluptatem
+            voluptate dolorem quibusdam sequi exercitationem ad!
+          </p>
+        </div>
+      </section>
 
-            <section class="wrapper" id="custom_list">
-                <h3>Custom List</h3>
-                <div class="custom-list">
-                    <ul>
-                        <li>First Item</li>
-                        <li>Second Item</li>
-                        <li>Third Item</li>
-                    </ul>
-                </div>
-            </section>
+      <section class="wrapper" id="custom_list">
+        <h3>Custom List</h3>
+        <div class="custom-list">
+          <ul>
+            <li>First Item</li>
+            <li>Second Item</li>
+            <li>Third Item</li>
+          </ul>
+        </div>
+      </section>
 
-            <section class="wrapper" id="custom_selection">
-                <h3>Custom Color Selection</h3>
-                <div class="custom-selection">Custom text selection with ::selection pseudo-element</div>
-            </section>
+      <section class="wrapper" id="custom_selection">
+        <h3>Custom Color Selection</h3>
+        <div class="custom-selection">Custom text selection with ::selection pseudo-element</div>
+      </section>
 
-            <section class="wrapper" id="no_selection">
-                <h3>Disable User Selection</h3>
+      <section class="wrapper" id="no_selection">
+        <h3>Disable User Selection</h3>
 
-                <div class="no-selection">No selection with user-select CSS property</div>
-            </section>
+        <div class="no-selection">No selection with user-select CSS property</div>
+      </section>
 
-            <section class="wrapper" id="resize">
-                <h3>Resize Anything</h3>
-                <div class="box resize">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis similique explicabo hic
-                        nostrum quia quas, libero eos deleniti quo ipsa iste illum alias reiciendis iusto quasi in
-                        aliquam accusantium. Dolorem?
-                    </p>
-                </div>
-            </section>
+      <section class="wrapper" id="resize">
+        <h3>Resize Anything</h3>
+        <div class="box resize">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis similique explicabo hic nostrum quia
+            quas, libero eos deleniti quo ipsa iste illum alias reiciendis iusto quasi in aliquam accusantium. Dolorem?
+          </p>
+        </div>
+      </section>
 
-            <section class="wrapper" id="css_modal">
-                <h3>CSS Modal</h3>
-                <a class="button" href="#modal">Open Modal</a>
-            </section>
+      <section class="wrapper" id="css_modal">
+        <h3>CSS Modal</h3>
+        <a class="button" href="#modal">Open Modal</a>
+      </section>
 
-            <div class="modal" id="modal">
-                <div class="modal-content">
-                    <header>
-                        <h1>CSS Modal</h1>
-                        <a href="#css_modal" class="close">x</a>
-                    </header>
-                    <main>No need for Javascript</main>
-                </div>
-            </div>
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <header>
+            <h1>CSS Modal</h1>
+            <a href="#css_modal" class="close">x</a>
+          </header>
+          <main>No need for Javascript</main>
+        </div>
+      </div>
 
-            <section class="wrapper" id="dropdown">
-                <h3>Dropdown Menu CSS Only</h3>
-                <p>Javascript is not needed, but is the best choice to improve accessibility</p>
+      <section class="wrapper" id="dropdown">
+        <h3>Dropdown Menu CSS Only</h3>
+        <p>Javascript is not needed, but is the best choice to improve accessibility</p>
 
-                <!-- accessibility properties -->
-                <!-- aria-label to identify the purpose of the navigation -->
-                <!-- aria-expanded to tell if the target(the dropdown menu) is open or not -->
-                <!-- aria-controls tells what the button is controlling(dropdown menu) -->
-                <nav aria-label="Dropdown Example">
-                    <ul>
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="dropdown">
-                            <button
-                                type="button"
-                                class="dropdown-title"
-                                aria-expanded="false"
-                                aria-controls="movies_dropdown"
-                            >
-                                Movies
-                            </button>
-                            <ul class="dropdown-menu" id="movies_dropdown">
-                                <li><a href="#">Return of the Jedi</a></li>
-                                <li><a href="#">Empire Strikes Back</a></li>
-                                <li><a href="#">A New Hope</a></li>
-                                <li><a href="#">Revenge of the Sith</a></li>
-                                <li><a href="#">Attack of the Clones</a></li>
-                                <li><a href="#">Phantom Menace</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">About</a></li>
-                    </ul>
-                </nav>
-            </section>
+        <!-- accessibility properties -->
+        <!-- aria-label to identify the purpose of the navigation -->
+        <!-- aria-expanded to tell if the target(the dropdown menu) is open or not -->
+        <!-- aria-controls tells what the button is controlling(dropdown menu) -->
+        <nav aria-label="Dropdown Example">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li class="dropdown">
+              <button type="button" class="dropdown-title" aria-expanded="false" aria-controls="movies_dropdown">
+                Movies
+              </button>
+              <ul class="dropdown-menu" id="movies_dropdown">
+                <li><a href="#">Return of the Jedi</a></li>
+                <li><a href="#">Empire Strikes Back</a></li>
+                <li><a href="#">A New Hope</a></li>
+                <li><a href="#">Revenge of the Sith</a></li>
+                <li><a href="#">Attack of the Clones</a></li>
+                <li><a href="#">Phantom Menace</a></li>
+              </ul>
+            </li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </nav>
+      </section>
 
-            <section class="wrapper" id="empty">
-                <h3>Empty Elements</h3>
-                <div class="columns">
-                    <div class="box"></div>
-                    <div class="box">Hello there!</div>
-                </div>
-            </section>
+      <section class="wrapper" id="empty">
+        <h3>Empty Elements</h3>
+        <div class="columns">
+          <div class="box"></div>
+          <div class="box">Hello there!</div>
+        </div>
+      </section>
 
-            <section class="wrapper" id="scrollbar">
-                <h3>Custom Scrollbar</h3>
+      <section class="wrapper" id="scrollbar">
+        <h3>Custom Scrollbar</h3>
 
-                <div class="box custom-scrollbar">
-                    <div class="content">custom scrollbar</div>
-                </div>
-            </section>
+        <div class="box custom-scrollbar">
+          <div class="content">custom scrollbar</div>
+        </div>
+      </section>
 
-            <section class="wrapper" id="sticky">
-                <h3>Sticky</h3>
-                <div class="box sticky"></div>
-            </section>
+      <section class="wrapper" id="sticky">
+        <h3>Sticky</h3>
+        <div class="box sticky"></div>
+      </section>
 
-            <section class="wrapper" id="tooltip">
-                <h3>HTML/CSS Tooltip</h3>
-                <p>Hover <span class="tooltip" data-tooltip="Hello there!">here</span> to see the tooltip in action</p>
-            </section>
+      <section class="wrapper" id="tooltip">
+        <h3>HTML/CSS Tooltip</h3>
+        <p>Hover <span class="tooltip" data-tooltip="Hello there!">here</span> to see the tooltip in action</p>
+      </section>
 
-            <section class="wrapper" id="custom_caret">
-                <h3>Custom Caret Color</h3>
-                <input type="text" class="caret-color" placeholder="Insert anything" />
-            </section>
+      <section class="wrapper" id="custom_caret">
+        <h3>Custom Caret Color</h3>
+        <input type="text" class="caret-color" placeholder="Insert anything" />
+      </section>
 
-            <section class="wrapper" id="select">
-                <h3>Custom Select CSS Only</h3>
-                <label for="custom_select">Select Example:</label>
-                <div class="select">
-                    <select name="custom-select" id="custom_select">
-                        <option value="option1">option1</option>
-                        <option value="option2">option2</option>
-                        <option value="option3">option3</option>
-                        <option value="option4">option4</option>
-                    </select>
-                </div>
-            </section>
+      <section class="wrapper" id="select">
+        <h3>Custom Select CSS Only</h3>
+        <label for="custom_select">Select Example:</label>
+        <div class="select">
+          <select name="custom-select" id="custom_select">
+            <option value="option1">option1</option>
+            <option value="option2">option2</option>
+            <option value="option3">option3</option>
+            <option value="option4">option4</option>
+          </select>
+        </div>
+      </section>
 
-            <section class="wrapper" id="checkbox">
-                <h3>Custom Checkbox</h3>
+      <section class="wrapper" id="checkbox">
+        <h3>Custom Checkbox</h3>
 
-                <label class="form-control">
-                    <input type="checkbox" name="checkbox" />
-                    Checkbox
-                </label>
-            </section>
+        <label class="form-control">
+          <input type="checkbox" name="checkbox" />
+          Checkbox
+        </label>
+      </section>
 
-            <section class="wrapper" id="range">
-                <h3>::in-range and ::out-range</h3>
-                <form class="form">
-                    <label for="first">Between 1 and 10</label>
-                    <input type="number" name="first" id="first" min="1" max="10" />
-                </form>
-            </section>
+      <section class="wrapper" id="range">
+        <h3>::in-range and ::out-range</h3>
+        <form class="form">
+          <label for="first">Between 1 and 10</label>
+          <input type="number" name="first" id="first" min="1" max="10" />
+        </form>
+      </section>
 
-            <section class="wrapper" id="fancy">
-                <h3>Fancy Text</h3>
+      <section class="wrapper" id="fancy">
+        <h3>Fancy Text</h3>
 
-                <h4>Background Clipping</h4>
-            </section>
+        <h4>Background Clipping</h4>
+      </section>
 
-            <section class="wrapper" id="gap">
-                <h3>Flex Gap</h3>
-                <div class="boxes">
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                    <div class="box"></div>
-                </div>
-            </section>
+      <section class="wrapper" id="gap">
+        <h3>Flex Gap</h3>
+        <div class="boxes">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </section>
 
-            <section class="wrapper" id="grayscale">
-                <h3>Grayscale Image</h3>
+      <section class="wrapper" id="grayscale">
+        <h3>Grayscale Image</h3>
 
-                <div class="images">
-                    <img src="https://picsum.photos/id/69/200/150" loading="lazy" alt="Normal Image" />
-                    <img
-                        src="https://picsum.photos/id/69/200/150"
-                        loading="lazy"
-                        class="grayscale"
-                        alt="Grayscale Image"
-                    />
-                </div>
-            </section>
+        <div class="images">
+          <img src="https://picsum.photos/id/69/200/150" loading="lazy" alt="Normal Image" />
+          <img src="https://picsum.photos/id/69/200/150" loading="lazy" class="grayscale" alt="Grayscale Image" />
+        </div>
+      </section>
 
-            <section class="wrapper" id="gradient">
-                <h3>Gradient Border</h3>
+      <section class="wrapper" id="gradient">
+        <h3>Gradient Border</h3>
 
-                <div class="gradient-border">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
-            </section>
+        <div class="gradient-border">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+      </section>
 
-            <section class="wrapper" id="video">
-                <h3>Embed Video Lazy Loading</h3>
+      <section class="wrapper" id="video">
+        <h3>Embed Video Lazy Loading</h3>
 
-                <div class="container-video">
-                    <div class="video-wrapper">
-                        <!-- Passing a style, a thumbnail and a hover play button with srcdoc -->
-                        <!-- First remove all margin and padding to make the video fill the entire wrapper -->
-                        <!-- Centralize the play button and give shadow and hover effect -->
-                        <!-- Link to the embed video in the thumbnail and svg button -->
-                        <!-- The video load only after clicking the play/thumbnail link -->
-                        <iframe
-                            loading="lazy"
-                            srcdoc="<style>
+        <div class="container-video">
+          <div class="video-wrapper">
+            <!-- Passing a style, a thumbnail and a hover play button with srcdoc -->
+            <!-- First remove all margin and padding to make the video fill the entire wrapper -->
+            <!-- Centralize the play button and give shadow and hover effect -->
+            <!-- Link to the embed video in the thumbnail and svg button -->
+            <!-- The video load only after clicking the play/thumbnail link -->
+            <iframe
+              loading="lazy"
+              srcdoc="<style>
                             * {
                             padding: 0;
                             margin: 0;
@@ -341,115 +328,115 @@
                             <svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='#ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-play-circle'><circle cx='12' cy='12' r='10'></circle><polygon points='10 8 16 12 10 16 10 8'></polygon></svg>
                           </a>
                           "
-                            src="https://www.youtube.com/embed/aqz-KE-bpKQ"
-                            title="Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen
-                        >
-                        </iframe>
-                    </div>
-                </div>
-            </section>
+              src="https://www.youtube.com/embed/aqz-KE-bpKQ"
+              title="Big Buck Bunny 60fps 4K - Official Blender Foundation Short Film"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
 
-            <section class="wrapper" id="support">
-                <h3>@Supports</h3>
-                <div class="background-image">
-                    <div class="box blur">
-                        <p>Support to all browsers</p>
-                    </div>
-                </div>
-            </section>
+      <section class="wrapper" id="support">
+        <h3>@Supports</h3>
+        <div class="background-image">
+          <div class="box blur">
+            <p>Support to all browsers</p>
+          </div>
+        </div>
+      </section>
 
-            <section class="table-wrapper wrapper" id="table">
-                <h3>Table Responsive</h3>
-                <table class="table">
-                    <!-- 7,8,9 doesn't count -->
-                    <thead>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Profession</th>
-                        <th>Dead/Alive</th>
-                        <th>Birthplace</th>
-                        <th>First Movie</th>
-                        <th>Last Movie</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td data-label="First Name">Anakin</td>
-                            <td data-label="Last Name">Skywalker</td>
-                            <td data-label="Profession">Jedi Not Master</td>
-                            <td data-label="Dead/Alive">Dead</td>
-                            <td data-label="Birthplace">Tatooine</td>
-                            <td data-label="First Movie">The Phantom Menace</td>
-                            <td data-label="Last Movie">Revenge of the Sith</td>
-                        </tr>
-                        <tr>
-                            <td data-label="First Name">Luke</td>
-                            <td data-label="Last Name">Skywalker</td>
-                            <td data-label="Profession">Jedi Master</td>
-                            <td data-label="Dead/Alive">Alive</td>
-                            <td data-label="Birthplace">Tatooine</td>
-                            <td data-label="First Movie">A New Hope</td>
-                            <td data-label="Last Movie">Return of the Jedi</td>
-                        </tr>
-                        <tr>
-                            <td data-label="First Name">Padme</td>
-                            <td data-label="Last Name">Amidala</td>
-                            <td data-label="Profession">Politician</td>
-                            <td data-label="Dead/Alive">Dead</td>
-                            <td data-label="Birthplace">Naboo</td>
-                            <td data-label="First Movie">The Phantom Menace</td>
-                            <td data-label="Last Movie">Revenge of the Sith</td>
-                        </tr>
-                        <tr>
-                            <td data-label="First Name">Leia</td>
-                            <td data-label="Last Name">Organa</td>
-                            <td data-label="Profession">General Princess</td>
-                            <td data-label="Dead/Alive">Alive</td>
-                            <td data-label="Birthplace">Alderan</td>
-                            <td data-label="First Movie">A New Hope</td>
-                            <td data-label="Last Movie">Return of the Jedi</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+      <section class="table-wrapper wrapper" id="table">
+        <h3>Table Responsive</h3>
+        <table class="table">
+          <!-- 7,8,9 doesn't count -->
+          <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Profession</th>
+            <th>Dead/Alive</th>
+            <th>Birthplace</th>
+            <th>First Movie</th>
+            <th>Last Movie</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="First Name">Anakin</td>
+              <td data-label="Last Name">Skywalker</td>
+              <td data-label="Profession">Jedi Not Master</td>
+              <td data-label="Dead/Alive">Dead</td>
+              <td data-label="Birthplace">Tatooine</td>
+              <td data-label="First Movie">The Phantom Menace</td>
+              <td data-label="Last Movie">Revenge of the Sith</td>
+            </tr>
+            <tr>
+              <td data-label="First Name">Luke</td>
+              <td data-label="Last Name">Skywalker</td>
+              <td data-label="Profession">Jedi Master</td>
+              <td data-label="Dead/Alive">Alive</td>
+              <td data-label="Birthplace">Tatooine</td>
+              <td data-label="First Movie">A New Hope</td>
+              <td data-label="Last Movie">Return of the Jedi</td>
+            </tr>
+            <tr>
+              <td data-label="First Name">Padme</td>
+              <td data-label="Last Name">Amidala</td>
+              <td data-label="Profession">Politician</td>
+              <td data-label="Dead/Alive">Dead</td>
+              <td data-label="Birthplace">Naboo</td>
+              <td data-label="First Movie">The Phantom Menace</td>
+              <td data-label="Last Movie">Revenge of the Sith</td>
+            </tr>
+            <tr>
+              <td data-label="First Name">Leia</td>
+              <td data-label="Last Name">Organa</td>
+              <td data-label="Profession">General Princess</td>
+              <td data-label="Dead/Alive">Alive</td>
+              <td data-label="Birthplace">Alderan</td>
+              <td data-label="First Movie">A New Hope</td>
+              <td data-label="Last Movie">Return of the Jedi</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-            <section class="wrapper" id="clamp">
-                <h3>Responsive text with clamp</h3>
-                <p>Hello There!</p>
-            </section>
+      <section class="wrapper" id="clamp">
+        <h3>Responsive text with clamp</h3>
+        <p>Hello There!</p>
+      </section>
 
-            <section class="wrapper" id="focus">
-                <h3>Focus vs Focus Visible</h3>
-                <button class="button">Try using Tab and Clicking with Mouse</button>
-            </section>
+      <section class="wrapper" id="focus">
+        <h3>Focus vs Focus Visible</h3>
+        <button class="button">Try using Tab and Clicking with Mouse</button>
+      </section>
 
-            <section class="wrapper" id="inherit">
-                <h3>Inherit Font for button/select/input</h3>
-                <div class="buttons">
-                    <button class="button">Button with the default font</button>
-                    <button class="button custom-button">Button with the font used on the body</button>
-                </div>
-            </section>
+      <section class="wrapper" id="inherit">
+        <h3>Inherit Font for button/select/input</h3>
+        <div class="buttons">
+          <button class="button">Button with the default font</button>
+          <button class="button custom-button">Button with the font used on the body</button>
+        </div>
+      </section>
 
-            <section class="wrapper" id="outline_text">
-                <h3>Gradient Outline Text</h3>
+      <section class="wrapper" id="outline_text">
+        <h3>Gradient Outline Text</h3>
 
-                <h4 class="outline">Lorem ipsum dolor sit.</h4>
-            </section>
+        <h4 class="outline">Lorem ipsum dolor sit.</h4>
+      </section>
 
-            <section class="wrapper" id="mask">
-                <h3>Image Mask</h3>
+      <section class="wrapper" id="mask">
+        <h3>Image Mask</h3>
 
-                <img src="https://picsum.photos/id/666/300/300" alt="Image With SVG Mask" />
-            </section>
-        </main>
+        <img src="https://picsum.photos/id/666/300/300" alt="Image With SVG Mask" />
+      </section>
+    </main>
 
-        <script type="module" src="/main.js"></script>
+    <script type="module" src="/main.js"></script>
 
-        <footer>
-            <small>Made with ❤️ by <a href="https://github.com/mayronH">mayronH</a></small>
-        </footer>
-    </body>
+    <footer>
+      <small>Made with ❤️ by <a href="https://github.com/mayronH">mayronH</a></small>
+    </footer>
+  </body>
 </html>
