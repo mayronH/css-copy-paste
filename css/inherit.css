@@ -10,10 +10,10 @@ select {
 } */
 
 #inherit .button {
-    font-size: 1rem;
-    font-weight: 400;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .custom-button {
-    font-family: inherit;
+  font-family: inherit;
 }

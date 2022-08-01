@@ -1,49 +1,49 @@
 /* HTML/CSS Tooltip only */
 
 .tooltip {
-    color: var(--accent);
-    text-decoration: underline;
+  color: var(--accent);
+  text-decoration: underline;
 
-    position: relative;
+  position: relative;
 }
 
 /* Tooltip box */
 .tooltip:before {
-    /* content property sets a content to the :before pseudo-element */
-    /* attr gets the attribute of the .tooltip, in this case the data-tooltip */
-    content: attr(data-tooltip);
+  /* content property sets a content to the :before pseudo-element */
+  /* attr gets the attribute of the .tooltip, in this case the data-tooltip */
+  content: attr(data-tooltip);
 
-    /* Position above the text */
-    position: absolute;
-    bottom: 1.2rem;
-    /* Centralizing the tooltip */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+  /* Position above the text */
+  position: absolute;
+  bottom: 1.2rem;
+  /* Centralizing the tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 
-    visibility: hidden;
-    opacity: 0;
+  visibility: hidden;
+  opacity: 0;
 
-    min-width: 10ch;
+  min-width: 10ch;
 
-    background-color: var(--accent);
+  background-color: var(--accent);
 
-    font-size: 0.75em;
-    color: #fff;
-    text-align: center;
+  font-size: 0.75em;
+  color: #fff;
+  text-align: center;
 
-    padding: 8px;
+  padding: 8px;
 
-    border-radius: 3px;
+  border-radius: 3px;
 
-    /* Smoother transition */
-    transition: opacity 0.6s;
+  /* Smoother transition */
+  transition: opacity 0.6s;
 }
 
 /* Hover effect modifying only the :before pseudo-element */
 .tooltip:hover:before {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* https://markodenic.com/css-tips/ */

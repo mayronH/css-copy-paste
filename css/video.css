@@ -3,29 +3,29 @@
 /* Video container with specific width */
 #video,
 .container-video {
-    width: 100%;
-    max-width: 960px;
+  width: 100%;
+  max-width: 960px;
 }
 
 /* Video wrapper with 308px height*/
 .video-wrapper {
-    /* Position relative to centralize the iframe */
-    position: relative;
-    /* Padding Bottom with 56.15% of the width to give an height to the wrapper. */
-    /* The 56.15% makes the video the right height to the embed video */
-    padding-bottom: 56.15%;
-    height: 0;
-    overflow: hidden;
+  /* Position relative to centralize the iframe */
+  position: relative;
+  /* Padding Bottom with 56.15% of the width to give an height to the wrapper. */
+  /* The 56.15% makes the video the right height to the embed video */
+  padding-bottom: 56.15%;
+  height: 0;
+  overflow: hidden;
 }
 
 /* Iframe filling the entire wrapper */
 iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* https://chrispennington.blog/blog/lazy-load-youtube-embed-with-custom-poster/ */

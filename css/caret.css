@@ -1,6 +1,6 @@
 /* Custom Caret Color */
 .caret-color {
-    caret-color: var(--accent);
+  caret-color: var(--accent);
 }
 
 /* https://markodenic.com/css-tips/ */

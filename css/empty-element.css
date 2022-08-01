@@ -1,6 +1,6 @@
 /* The :empty selector styles an element that has no children or no text */
 .box:empty {
-    background: var(--accent);
+  background: var(--accent);
 }
 
 /* https://markodenic.com/css-tips/ */

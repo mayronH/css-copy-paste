@@ -1,69 +1,69 @@
 /* CSS Modal */
 .modal {
-    /* Hide the modal with visibility and opacity */
-    visibility: hidden;
-    opacity: 0;
+  /* Hide the modal with visibility and opacity */
+  visibility: hidden;
+  opacity: 0;
 
-    /* Make the modal centralize and above the page layer  */
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  /* Make the modal centralize and above the page layer  */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
-    /* Centralize the modal content */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  /* Centralize the modal content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    /* Darken the page */
-    background: rgba(0, 0, 0, 0.5);
+  /* Darken the page */
+  background: rgba(0, 0, 0, 0.5);
 
-    /* Smoother transition to the opening and closing of modal */
-    transition: all 0.4s;
+  /* Smoother transition to the opening and closing of modal */
+  transition: all 0.4s;
 }
 
 /* When the link with #modal is targeted(clicked) this css code takes place, making the modal visible */
 .modal:target {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 /* The modal box */
 .modal-content {
-    position: relative;
+  position: relative;
 
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 
-    width: 480px;
-    max-width: 90%;
+  width: 480px;
+  max-width: 90%;
 
-    background: #fff;
+  background: #fff;
 
-    color: #333;
+  color: #333;
 
-    padding: 15px 25px;
+  padding: 15px 25px;
 
-    border-radius: 3px;
+  border-radius: 3px;
 }
 
 .modal-content header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* The close button target anything else so the modal:target doesn't work anymore, hiding the modal */
 .modal-content .close {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .modal-content main {
-    flex: 1;
-    padding: 15px 0;
+  flex: 1;
+  padding: 15px 0;
 
-    text-align: center;
+  text-align: center;
 }
 
 /* https://markodenic.com/css-tips/ */

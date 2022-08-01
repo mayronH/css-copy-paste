@@ -1,40 +1,40 @@
 /* Gradient Border */
 .gradient-border {
-    text-align: center;
-    padding: 25px 30px;
+  text-align: center;
+  padding: 25px 30px;
 
-    /* Transparent border to clip through */
-    border-radius: 10px;
-    border: 5px solid transparent;
+  /* Transparent border to clip through */
+  border-radius: 10px;
+  border: 5px solid transparent;
 
-    /* Position relative so is easier to position the :before pseudo-element */
-    position: relative;
-    /* Easier to calculate */
-    box-sizing: border-box;
+  /* Position relative so is easier to position the :before pseudo-element */
+  position: relative;
+  /* Easier to calculate */
+  box-sizing: border-box;
 
-    /* Background to cover the :before pseudo-element */
-    background: var(--body);
-    /* Padding-box counts the content and the padding, leaving the border */
-    background-clip: padding-box;
+  /* Background to cover the :before pseudo-element */
+  background: var(--body);
+  /* Padding-box counts the content and the padding, leaving the border */
+  background-clip: padding-box;
 }
 
 .gradient-border::before {
-    content: "";
+  content: '';
 
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 
-    /* Making the :before pseudo-element 5px larger than content */
-    margin: -5px;
-    /* Inherit the border-radius of gradient-border */
-    border-radius: inherit;
+  /* Making the :before pseudo-element 5px larger than content */
+  margin: -5px;
+  /* Inherit the border-radius of gradient-border */
+  border-radius: inherit;
 
-    /* The gradient */
-    background: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
+  /* The gradient */
+  background: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
 }
 
 /* https://markodenic.com/css-tips/ */

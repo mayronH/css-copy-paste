@@ -1,8 +1,8 @@
 /* Disable User Selection */
 .no-selection {
-    /* Practically every browser support it but we need prefixes */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  /* Practically every browser support it but we need prefixes */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

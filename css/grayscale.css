@@ -1,15 +1,15 @@
 /* Grayscale filter */
 .images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
 .grayscale {
-    /* Apply filter to the image */
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
+  /* Apply filter to the image */
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 /* https://markodenic.com/css-tips/ */

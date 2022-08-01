@@ -1,10 +1,10 @@
 /* Anything can be resizable */
 .resize {
-    /* Resize property make the div resizable */
-    /* Both means resize vertically and horizontally */
-    resize: both;
-    /* Resize doesn't work with overflow visible, should be "hidden" or "scroll" or "auto" */
-    overflow: auto;
+  /* Resize property make the div resizable */
+  /* Both means resize vertically and horizontally */
+  resize: both;
+  /* Resize doesn't work with overflow visible, should be "hidden" or "scroll" or "auto" */
+  overflow: auto;
 }
 
 /* https://markodenic.com/css-tips/ */

@@ -1,20 +1,20 @@
 /* Custom Cursor */
 .cursor {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 
-    background: var(--light-grey);
+  background: var(--light-grey);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    padding: 8px;
+  padding: 8px;
 
-    /* The auto value make the browser decide the cursor as "callback" */
-    /* The URL could be an emoji or image */
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>"),
-        auto;
+  /* The auto value make the browser decide the cursor as "callback" */
+  /* The URL could be an emoji or image */
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🚀</text></svg>"),
+    auto;
 }
 
 /* https://markodenic.com/css-tips/ */

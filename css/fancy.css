@@ -1,22 +1,22 @@
 /* Using background images on text */
 h4 {
-    font-size: 60px;
-    text-transform: uppercase;
-    text-align: center;
-    /* Transparent font */
-    color: transparent;
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  /* Transparent font */
+  color: transparent;
 
-    /* color as 'callback' and the url of the image */
-    background: var(--accent) url("https://picsum.photos/seed/picsum/500/300");
-    /* Background extends underneath the text */
-    background-clip: text;
-    -webkit-background-clip: text;
+  /* color as 'callback' and the url of the image */
+  background: var(--accent) url('https://picsum.photos/seed/picsum/500/300');
+  /* Background extends underneath the text */
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 @media (max-width: 425px) {
-    h4 {
-        font-size: 32px;
-    }
+  h4 {
+    font-size: 32px;
+  }
 }
 
 /* https://markodenic.com/css-tips/ */

@@ -1,13 +1,13 @@
 /* Custom Selection Color */
 .custom-selection::-moz-selection {
-    background-color: var(--accent);
+  background-color: var(--accent);
 }
 .custom-selection::selection {
-    background-color: var(--accent);
+  background-color: var(--accent);
 }
 
 .custom-selection {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 /* https://markodenic.com/css-tips/ */

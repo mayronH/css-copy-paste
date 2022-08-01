@@ -1,87 +1,87 @@
 /* Select CSS Only */
 
 #select label {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 select {
-    /* Resetting the default select appearance */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    outline: none;
+  /* Resetting the default select appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
 
-    /* Inherit font property from document */
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+  /* Inherit font property from document */
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 
-    /* padding right for the arrow */
-    padding: 0 1rem 0 0;
-    margin: 0;
+  /* padding right for the arrow */
+  padding: 0 1rem 0 0;
+  margin: 0;
 
-    width: 100%;
+  width: 100%;
 
-    cursor: inherit;
+  cursor: inherit;
 }
 
 /* Removing the default arrow for lower IE versions */
 select::-ms-expand {
-    display: none;
+  display: none;
 }
 
 .select {
-    width: 100%;
+  width: 100%;
 
-    min-width: 10ch;
-    max-width: 20ch;
+  min-width: 10ch;
+  max-width: 20ch;
 
-    border: 1px solid var(--header);
-    border-radius: 3px;
+  border: 1px solid var(--header);
+  border-radius: 3px;
 
-    padding: 0.5rem;
+  padding: 0.5rem;
 
-    cursor: pointer;
+  cursor: pointer;
 
-    background-color: var(--scrollbar-track);
+  background-color: var(--scrollbar-track);
 
-    /* Display grid to align the arrow */
-    display: grid;
-    /* Create a named area called select */
-    /* without a common area for both the select and the arrow, the arrow will not be in the same line */
-    grid-template-areas: "select";
-    align-items: center;
+  /* Display grid to align the arrow */
+  display: grid;
+  /* Create a named area called select */
+  /* without a common area for both the select and the arrow, the arrow will not be in the same line */
+  grid-template-areas: 'select';
+  align-items: center;
 
-    /* We can also use display: flex and align-items:center to achieve that */
+  /* We can also use display: flex and align-items:center to achieve that */
 }
 
 /* Select arrow */
 .select::after {
-    content: "";
+  content: '';
 
-    width: 0.8rem;
-    height: 0.5rem;
+  width: 0.8rem;
+  height: 0.5rem;
 
-    background-color: var(--text);
+  background-color: var(--text);
 
-    /* create the arrow shape with clip-path */
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  /* create the arrow shape with clip-path */
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 
-    /* arrow on far right */
-    justify-self: end;
+  /* arrow on far right */
+  justify-self: end;
 }
 
 /* Using the named area for both the select and the arrow */
 select,
 .select::after {
-    grid-area: select;
+  grid-area: select;
 }
 
 select:focus-within {
-    outline: 2px solid var(--accent);
-    outline-offset: 0.5rem;
+  outline: 2px solid var(--accent);
+  outline-offset: 0.5rem;
 }
 
 /* https://markodenic.com/css-tips/ */

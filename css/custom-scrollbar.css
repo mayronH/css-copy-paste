@@ -1,41 +1,41 @@
 /* Custom Scrollbar */
 .custom-scrollbar {
-    overflow: auto;
-    display: inline-block;
+  overflow: auto;
+  display: inline-block;
 
-    height: 200px;
+  height: 200px;
 }
 
 .box .content {
-    height: 500px;
+  height: 500px;
 
-    text-align: center;
+  text-align: center;
 }
 
 /* The scrollbar itself */
 .custom-scrollbar::-webkit-scrollbar {
-    /* How thick the scrollbar is */
-    width: 12px;
+  /* How thick the scrollbar is */
+  width: 12px;
 
-    /* The background bar */
-    background-color: var(--scrollbar-track);
+  /* The background bar */
+  background-color: var(--scrollbar-track);
 }
 
 /* The track */
 .custom-scrollbar::-webkit-scrollbar-track {
-    border-radius: 3px;
-    background-color: transparent;
+  border-radius: 3px;
+  background-color: transparent;
 }
 
 /* The scrollbar indicator */
 .custom-scrollbar::-webkit-scrollbar-thumb {
-    border-radius: 5px;
+  border-radius: 5px;
 
-    /* The color of the indicator */
-    background-color: var(--accent);
+  /* The color of the indicator */
+  background-color: var(--accent);
 
-    /* A little "padding" */
-    border: 2px solid var(--accent);
+  /* A little "padding" */
+  border: 2px solid var(--accent);
 }
 
 /* https://markodenic.com/css-tips/ */

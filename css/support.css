@@ -1,31 +1,31 @@
 /* Support all browsers with @supports */
 .background-image {
-    background: var(--accent) url("https://picsum.photos/seed/hi/500/300");
+  background: var(--accent) url('https://picsum.photos/seed/hi/500/300');
 
-    /* Using min to acknowledge zoom and small size windows */
-    /* the left/right padding will be 40px for most sizes but when is too small the size will be 3 * 1% of the view width */
-    padding: min(40px, 3vw);
+  /* Using min to acknowledge zoom and small size windows */
+  /* the left/right padding will be 40px for most sizes but when is too small the size will be 3 * 1% of the view width */
+  padding: min(40px, 3vw);
 }
 
 .blur {
-    text-align: center;
-    color: #fff;
+  text-align: center;
+  color: #fff;
 
-    background: var(--shadow-dark);
+  background: var(--shadow-dark);
 
-    /* backdrop-filter is not supported in all browsers */
-    /* Firefox, Safari, UC Browser and others doesn't support it */
-    backdrop-filter: blur(10px);
-    /* the -webkit is for the Safari Browser only */
-    -webkit-backdrop-filter: blur(10px);
+  /* backdrop-filter is not supported in all browsers */
+  /* Firefox, Safari, UC Browser and others doesn't support it */
+  backdrop-filter: blur(10px);
+  /* the -webkit is for the Safari Browser only */
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* With @supports you can give alternative to a style */
 /* If the browser doesn't support backdrop-filter or the -webkit version (Firefox, UC Browser, etc) then the background will be different. */
 @supports (not (backdrop-filter: blur())) and (not (-webkit-backdrop-filter: blur())) {
-    .blur {
-        background: rgba(255, 255, 255, 0.5);
-    }
+  .blur {
+    background: rgba(255, 255, 255, 0.5);
+  }
 }
 
 /* Coding in Public https://www.youtube.com/watch?v=adEwlFHLWd4 */

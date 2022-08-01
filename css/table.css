@@ -1,88 +1,88 @@
 /* Responsive Table */
 
 .table {
-    width: 100%;
-    /* Collapse into a single border */
-    border-collapse: collapse;
+  width: 100%;
+  /* Collapse into a single border */
+  border-collapse: collapse;
 
-    background-color: var(--header);
+  background-color: var(--header);
 }
 
 .table thead {
-    border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
 
 .table th {
-    border-bottom: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
 
 .table td,
 .table th {
-    padding: 0.75rem;
+  padding: 0.75rem;
 
-    text-align: center;
+  text-align: center;
 }
 
 .table tbody tr:nth-of-type(odd) {
-    background-color: var(--body-dark);
+  background-color: var(--body-dark);
 }
 
 @media screen and (max-width: 600px) {
-    .table {
-        border: 0;
+  .table {
+    border: 0;
 
-        background-color: unset;
-    }
+    background-color: unset;
+  }
 
-    /* Hiding the table head */
-    .table thead {
-        position: absolute;
+  /* Hiding the table head */
+  .table thead {
+    position: absolute;
 
-        clip: rect(0 0 0 0);
+    clip: rect(0 0 0 0);
 
-        margin: -1px;
+    margin: -1px;
 
-        overflow: hidden;
+    overflow: hidden;
 
-        height: 1px;
-        width: 1px;
-    }
+    height: 1px;
+    width: 1px;
+  }
 
-    /* Making the tr like card */
-    .table tr {
-        /* Without the display block, the default is table-row and margin doesn't work with */
-        display: block;
+  /* Making the tr like card */
+  .table tr {
+    /* Without the display block, the default is table-row and margin doesn't work with */
+    display: block;
 
-        margin-bottom: 1rem;
-    }
+    margin-bottom: 1rem;
+  }
 
-    /* Transform every td in "rows" */
-    .table td {
-        /* The display block is responsible for that */
-        display: block;
+  /* Transform every td in "rows" */
+  .table td {
+    /* The display block is responsible for that */
+    display: block;
 
-        border-bottom: 1px solid var(--light-grey);
+    border-bottom: 1px solid var(--light-grey);
 
-        text-align: right;
-    }
+    text-align: right;
+  }
 
-    .table td:last-child {
-        border-bottom: none;
-    }
+  .table td:last-child {
+    border-bottom: none;
+  }
 
-    /* Put the thead in the left of the td */
-    .table td::before {
-        /* Using the attribute data-label to create the new head */
-        content: attr(data-label);
+  /* Put the thead in the left of the td */
+  .table td::before {
+    /* Using the attribute data-label to create the new head */
+    content: attr(data-label);
 
-        /* Making the new thead align left */
-        float: left;
+    /* Making the new thead align left */
+    float: left;
 
-        font-weight: bold;
-    }
+    font-weight: bold;
+  }
 
-    .table tbody tr:nth-of-type(even),
-    .table tbody tr:nth-of-type(odd) {
-        background-color: var(--header);
-    }
+  .table tbody tr:nth-of-type(even),
+  .table tbody tr:nth-of-type(odd) {
+    background-color: var(--header);
+  }
 }

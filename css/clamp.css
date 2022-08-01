@@ -1,14 +1,14 @@
 /* Clamp font size instead of media query */
 
 #clamp p {
-    /* In my case 1rem = 16px(the default root font size) */
-    /* 1vw is 1% of the width of the viewport */
-    /* 2.5rem(40px) is the minimum size */
-    /* 6rem(96px) is the maximum size */
-    /* The font will adjust 2.5rem + 4% of the font until 6rem */
-    /* The font will be 2.5rem until 600px, then will scale 0.04px per 1px */
-    /* With 768px of view width the font-size will be 46.72px */
-    font-size: clamp(2.5rem, 4vw + 1rem, 6rem);
+  /* In my case 1rem = 16px(the default root font size) */
+  /* 1vw is 1% of the width of the viewport */
+  /* 2.5rem(40px) is the minimum size */
+  /* 6rem(96px) is the maximum size */
+  /* The font will adjust 2.5rem + 4% of the font until 6rem */
+  /* The font will be 2.5rem until 600px, then will scale 0.04px per 1px */
+  /* With 768px of view width the font-size will be 46.72px */
+  font-size: clamp(2.5rem, 4vw + 1rem, 6rem);
 }
 
 /* Coding in Public https://www.youtube.com/watch?v=Moely7aPYGE */
