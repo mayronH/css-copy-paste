@@ -34,7 +34,7 @@
   border-radius: inherit;
 
   /* The gradient */
-  background: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
+  background: var(--gradient);
 }
 
 /* https://markodenic.com/css-tips/ */

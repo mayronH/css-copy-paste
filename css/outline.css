@@ -25,7 +25,7 @@
   inset: 0;
   z-index: 1;
 
-  background: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
+  background: var(--gradient);
 
   /* how the element blends with its parent background */
   /* with mix-blend-mode darken, everything thats white will be substituted with the color of the background */
