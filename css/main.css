@@ -9,9 +9,10 @@
   --scrollbar-track-dark: #3f3f3f;
   --accent-dark: #f17c0d;
   --light-grey-dark: #555;
-  --header-dark: #333;
+  --header-dark: rgb(51, 51, 51, 0.8);
   --footer-dark: #4f4f4f;
   --shadow-dark: rgba(238, 238, 238, 0.2);
+  --gradient-dark: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
 
   /* Light Mode Colors */
   --text-light: #3c3c3c;
@@ -19,9 +20,10 @@
   --scrollbar-track-light: #e9e9e9;
   --accent-light: #45a2d8;
   --light-grey-light: #d8d8d8;
-  --header-light: #f4f4f5;
+  --header-light: rgb(244, 244, 245, 0.8);
   --footer-light: #e0ecf3;
   --shadow-light: rgba(49, 49, 49, 0.2);
+  --gradient-light: linear-gradient(315deg, #52fc99 0%, #45a2d8 74%);
 }
 
 /* Color Scheme */
@@ -84,7 +86,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   border-radius: 5px;
 
-  background-color: var(--accent);
+  background: var(--gradient);
 
   border: 2px solid var(--scrollbar-track);
 }
@@ -196,13 +198,21 @@ a:focus-visible {
   padding: 12px 25px;
 
   background-color: var(--header);
-  border-bottom: 1px solid var(--accent);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
   width: 100%;
 
   position: fixed;
   top: 0;
   z-index: 99;
+
+  /* Alternative Gradient Border */
+  border-bottom: 5px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: var(--gradient);
 }
 
 .nav-wrapper {
@@ -341,6 +351,7 @@ footer a {
     --header: var(--header-dark);
     --footer: var(--footer-dark);
     --shadow: var(--shadow-dark);
+    --gradient: var(--gradient-dark);
   }
 }
 
@@ -354,6 +365,7 @@ footer a {
     --header: var(--header-light);
     --footer: var(--footer-light);
     --shadow: var(--shadow-light);
+    --gradient: var(--gradient-light);
   }
 }
 
@@ -368,6 +380,7 @@ footer a {
   --header: var(--header-dark);
   --footer: var(--footer-dark);
   --shadow: var(--shadow-dark);
+  --gradient: var(--gradient-dark);
 }
 
 [color-scheme='light'] {
@@ -379,6 +392,7 @@ footer a {
   --header: var(--header-light);
   --footer: var(--footer-light);
   --shadow: var(--shadow-light);
+  --gradient: var(--gradient-light);
 }
 
 /* Disable all animations for people that prefer without it */
