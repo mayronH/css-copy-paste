@@ -1364,3 +1364,74 @@ img {
 ```
 
 </details>
+
+<details>
+  <summary>Toggle Button</summary>
+
+```HTML
+<form>
+    <div class="input-wrapper">
+        <input type="text" class="form-input" id="first_name" placeholder="First Name" autocomplete="given-name" />
+        <label for="first_name" class="form-label">First Name</label>
+    </div>
+</form>
+
+```
+
+```CSS
+.input-wrapper {
+  position: relative;
+
+  display: grid;
+  gap: 0.2em;
+
+  margin-block: 0.6em;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+
+  margin-inline: 0.45em;
+  padding: 0.1em 0.35em;
+
+  background-color: grey;
+
+  transition: transform 150ms cubic-bezier(0.86, -0.1, 0.27, 1.15),
+    background-color 150ms cubic-bezier(0.86, -0.1, 0.27, 1.15);
+}
+
+.form-input {
+  background-color: grey;
+
+  box-shadow: 0 0 0 -0.1em black, 0 0 0 -0.2em red;
+
+  transition: box-shadow 400ms cubic-bezier(0.86, -0.1, 0.27, 1.15);
+}
+
+.form-input:focus {
+  outline: none;
+
+  box-shadow: 0 0 0 0.2em black, 0 0 0 0.4em red;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+  /* translate top depends on the label font-size and the padding of the input */
+  transform: translate3d(0, -2.55em, 0);
+
+  background-color: black;
+  color: red;
+}
+
+.form-input::placeholder {
+  opacity: 0;
+}
+```
+
+</details>
