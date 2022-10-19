@@ -1267,3 +1267,100 @@ img {
 ```
 
 </details>
+
+<details>
+  <summary>Toggle Button</summary>
+
+```HTML
+<div class="toggle-container">
+    <label for="toggle" class="label">
+        <span class="toggle-text">On</span>
+        <input type="checkbox" name="" id="toggle" />
+        <span class="toggle-btn"></span>
+        <span class="toggle-text">Off</span>
+    </label>
+</div>
+
+```
+
+```CSS
+.label {
+  position: relative;
+
+  display: grid;
+  place-items: center;
+  grid-auto-flow: column;
+  gap: 1rem;
+
+  padding: 0.5rem 1.25rem;
+
+  border-radius: 100vw;
+}
+
+.toggle-text {
+  z-index: 2;
+
+  user-select: none;
+}
+
+.label input {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  cursor: pointer;
+
+  border-radius: 100vw;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.label input:focus-visible {
+  outline: 4px solid grey;
+  outline-offset: 4px;
+}
+
+.toggle-btn {
+  position: relative;
+
+  pointer-events: none;
+
+  width: 5.5rem;
+  height: 3rem;
+
+  border-radius: 100vw;
+
+  box-shadow: inset 0px -1px 5px rgba(190, 190, 190, 0.2);
+}
+
+.toggle-btn::after {
+  content: '';
+
+  position: absolute;
+  top: 50%;
+  left: 0.3rem;
+
+  transform: translate3d(0, -50%, 0);
+
+  transition: transform 0.2s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+
+  height: 2.5rem;
+  width: 2.5rem;
+
+  background-color: red;
+
+  border-radius: 50%;
+
+  box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.6);
+}
+
+.label input:checked ~ .toggle-btn::after {
+  transform: translate3d(2.4rem, -50%, 0);
+}
+```
+
+</details>

@@ -29,6 +29,7 @@ import './css/inherit.css'
 import './css/outline.css'
 import './css/mask.css'
 import './css/no-selection.css'
+import './css/toggle.css'
 
 // Light/Dark Button
 const button = document.querySelector('#button-theme')
