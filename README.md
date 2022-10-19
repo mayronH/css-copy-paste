@@ -1366,7 +1366,7 @@ img {
 </details>
 
 <details>
-  <summary>Toggle Button</summary>
+  <summary>Custom Label</summary>
 
 ```HTML
 <form>
