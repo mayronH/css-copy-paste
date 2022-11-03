@@ -31,6 +31,7 @@ import './css/mask.css'
 import './css/no-selection.css'
 import './css/toggle.css'
 import './css/custom-label.css'
+import './css/writing-mode.css'
 
 // Light/Dark Button
 const button = document.querySelector('#button-theme')
@@ -93,4 +94,24 @@ window.addEventListener('DOMContentLoaded', () => {
 const divWrappers = [...document.querySelectorAll('.wrapper')]
 divWrappers.forEach((div) => {
   div.setAttribute('tabindex', '-1')
+})
+
+const writingWrapper = document.querySelector('.writing-mode')
+document.querySelector('#button-vr').addEventListener('click', () => {
+  writingWrapper.classList.remove('vertical-left')
+  writingWrapper.classList.remove('horizontal')
+
+  writingWrapper.classList.add('vertical-right')
+})
+document.querySelector('#button-vl').addEventListener('click', () => {
+  writingWrapper.classList.remove('vertical-right')
+  writingWrapper.classList.remove('horizontal')
+
+  writingWrapper.classList.add('vertical-left')
+})
+document.querySelector('#button-h').addEventListener('click', () => {
+  writingWrapper.classList.remove('vertical-right')
+  writingWrapper.classList.remove('vertical-left')
+
+  writingWrapper.classList.add('horizontal')
 })

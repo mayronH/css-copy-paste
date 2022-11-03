@@ -1,0 +1,23 @@
+/* CSS Property Writing Mode */
+
+/* We can change the text writing alignment */
+/* Is really useful for Japanese */
+
+.writing-mode{
+  padding-block: 2rem;
+
+  width: 100%;
+}
+
+/* There more modes like sideways but is experimental and is not supported for most browsers */
+
+.vertical-right{
+  writing-mode: vertical-rl;
+}
+.vertical-left{
+  writing-mode: vertical-lr;
+}
+
+.horizontal{
+  writing-mode: horizontal-tb;
+}
