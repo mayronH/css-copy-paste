@@ -32,6 +32,7 @@ import './css/no-selection.css'
 import './css/toggle.css'
 import './css/custom-label.css'
 import './css/writing-mode.css'
+import './css/accent.css'
 
 // Light/Dark Button
 const button = document.querySelector('#button-theme')

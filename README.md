@@ -1435,3 +1435,39 @@ img {
 ```
 
 </details>
+
+<details>
+  <summary>Writing Mode</summary>
+
+```HTML
+ <div class="writing-mode">Lorem ipsum dolor sit amet.</div>
+
+```
+
+```CSS
+.writing-mode{
+    /* default */
+    /* writing-mode: horizontal-tb; */
+
+    /* writing-mode: vertical-rl; */
+    writing-mode: vertical-lr;
+}
+```
+
+</details>
+
+<details>
+  <summary>Accent Color</summary>
+
+```HTML
+ <input type="checkbox" />
+
+```
+
+```CSS
+input{
+  accent-color: red;
+}
+```
+
+</details>
