@@ -411,3 +411,17 @@ footer a {
     scroll-behavior: auto !important;
   }
 }
+
+/* Change the colors for people that prefer more contrast */
+@media (prefers-contrast: more) {
+  [color-scheme='dark'] {
+    --text: white;
+    --body: black;
+  }
+  
+  [color-scheme='light'] {
+    --text: black;
+    --body: white;
+  }
+}
+
