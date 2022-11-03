@@ -1,0 +1,16 @@
+.outside {
+  overflow: auto;
+  display: flex;
+
+  height: 300px;
+}
+
+.inside{
+  height: 200px;
+  
+  overflow: auto;
+  /* auto is the default value, when the scroll on the inside box get to the end, automatically the scroll motion is passed to the outside box */
+  /* contain disable this functionality, the scroll is kept on the inside box */
+  /* none disable any overscroll, in iOS disable the bounce effect */
+  overscroll-behavior: contain;
+}

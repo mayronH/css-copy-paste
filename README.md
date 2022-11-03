@@ -1471,3 +1471,31 @@ input{
 ```
 
 </details>
+
+<details>
+  <summary>Overscroll Behavior</summary>
+
+```HTML
+<div class="box outside">
+    <div class="box inside">
+        <div class="content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. In recusandae, doloremque, repellendus corrupti neque illum, similique odit atque expedita omnis optio!
+        </div>
+    </div>
+    <div class="content">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In recusandae, doloremque, repellendus corrupti neque illum, similique odit atque expedita omnis optio!
+    </div>
+</div>
+
+```
+
+```CSS
+.inside{
+  /* auto is the default value, when the scroll on the inside box get to the end, automatically the scroll motion is passed to the outside box */
+  /* contain disable this functionality, the scroll is kept on the inside box */
+  /* none disable any overscroll, in iOS disable the bounce effect */
+  overscroll-behavior: contain;
+}
+```
+
+</details>
