@@ -1,0 +1,47 @@
+/* Individual CSS Transform */
+#individual_transform button{
+  color: var(--text);
+  font-weight: 600;
+  text-align: center;
+
+  background: var(--accent);
+
+  padding: 1rem;
+
+  border: none;
+  border-radius: 3px;
+
+  transition: transform 125ms ease-out;
+}
+
+.button-wrong {
+  transform: translateY(20%);
+}
+/* Doing something like that will overwrite the transform properties */
+.button-wrong:hover {
+  transform: scale(.8);
+}
+
+.button-wrong:active{
+  transform: rotate(180deg);
+}
+
+/* Using custom properties we can change individually each transform operation without overwriting */
+/* Another option is to write the entire transform for each :hover/:active, but in that way the order of the operation matters, translate - rotate - scale is different from rotate - translate - scale. Linear Algebra 101 */
+:root {
+  --ty: 20%;
+  --scale: 1;
+  --deg: 0deg;
+}
+.button-transform {
+  transform: translateY(var(--ty)) scale(var(--scale)) rotate(var(--deg));
+  will-change: transform;
+}
+.button-transform:hover {
+  --scale: 0.8;
+}
+.button-transform:active{
+  --deg: 180deg;
+}
+
+/* https://css-tricks.com/individual-css-transform-functions/ */

@@ -1499,3 +1499,31 @@ input{
 ```
 
 </details>
+
+<details>
+  <summary>Individual CSS Transform</summary>
+
+```HTML
+ <button>Wah!</button>
+```
+
+```CSS
+:root {
+  --ty: 20%;
+  --scale: 1;
+  --deg: 0deg;
+}
+button{
+  transform: translateY(var(--ty)) scale(var(--scale)) rotate(var(--deg));
+  will-change: transform;
+}
+button:hover {
+  --scale: 0.8;
+}
+button:active{
+  --deg: 180deg;
+}
+
+```
+
+</details>
