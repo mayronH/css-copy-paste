@@ -1527,3 +1527,57 @@ button:active{
 ```
 
 </details>
+
+<details>
+  <summary>Blend Effect CSS</summary>
+
+```HTML
+<div class="canvas">
+    <img src="https://picsum.photos/id/433/640/360" alt="" />
+</div>
+```
+
+```CSS
+:root {
+  --photo-brightness: 90%;
+  --photo-contrast: 110%;
+  --photo-blur: 2px;
+}
+
+.canvas {
+  position: relative;
+
+  filter: contrast(2000%);
+  
+  overflow: hidden;
+}
+
+.canvas::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  bottom: -50%;
+  right: -50%;
+
+  background: radial-gradient(circle at center, #333, #fff);
+  background-size: 0.25em 0.25em;
+
+  transform: rotate(20deg);
+}
+
+.canvas img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  mix-blend-mode: hard-light;
+
+  filter: grayscale(1) brightness(var(--photo-brightness)) contrast(var(--photo-contrast)) blur(var(--photo-blur));
+}
+
+```
+
+</details>

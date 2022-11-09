@@ -35,6 +35,7 @@ import './css/writing-mode.css'
 import './css/accent.css'
 import './css/overscroll.css'
 import './css/transform.css'
+import './css/blend.css'
 
 // Light/Dark Button
 const button = document.querySelector('#button-theme')
