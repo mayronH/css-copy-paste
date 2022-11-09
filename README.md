@@ -1529,6 +1529,33 @@ button:active{
 </details>
 
 <details>
+  <summary>Radial Gradient</summary>
+
+```HTML
+<div class="radial-gradient pattern"></div>
+<div class="radial-gradient repeating"></div>
+```
+
+```CSS
+:root {
+  --size: 100px;
+}
+
+.pattern {
+  background: radial-gradient(10% 10%, white 90%, transparent),
+    radial-gradient(54% 54%, transparent 98%, red) calc(var(--size)/2) calc(var(--size)/2);
+  background-size: var(--size) var(--size);
+}
+
+.repeating{
+  background-image: repeating-radial-gradient(transparent 0% 12%, red 13% 26% );
+  background-size: var(--size) var(--size);
+}
+```
+
+</details>
+
+<details>
   <summary>Blend Effect CSS</summary>
 
 ```HTML

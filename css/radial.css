@@ -1,0 +1,47 @@
+/* Radial Gradient */
+/* With that we can create awesome patterns and cool gradients  */
+
+#radial_gradient {
+  width: 100%;
+}
+
+:root {
+  --size: 60px;
+}
+
+.radial-gradient{
+  width: 100%;
+  max-width: 640px;
+  min-height: 360px;
+  
+  margin-bottom: 5px;
+}
+
+.pattern {
+  /* the first radial-gradient is a little white circle (10% 10%) */
+  /* the second is circle that is a little bigger than a full circle (54% 54%) and the circle is transparent and the outside is the accent color 
+  the accent color start at 98% of the gradient, so the circle border is sharp but not too sharp
+  */
+  /* the numbers after the radial-gradient is a shift of the center of the circle, shifting half the size of the background-size */
+  background: radial-gradient(10% 10%, var(--body) 90%, transparent),
+    radial-gradient(54% 54%, transparent 98%, var(--accent)) calc(var(--size)/2) calc(var(--size)/2);
+  /* background-image: radial-gradient(54% 54%, var(--header) 98%, var(--accent)); */
+  /* the size is what create the pattern, without the size the background-image will occupy the entire space */
+  /* smaller size = tiny patterns */
+  /* bigger size = big pattern */
+  background-size: var(--size) var(--size);
+}
+
+.repeating{
+  /* repeating transparent - accent over and over */
+  background-image: repeating-radial-gradient(transparent 0% 12%, var(--accent) 13% 26% );
+  background-size: var(--size) var(--size);
+}
+
+@media screen and (max-width: 480px) {
+  :root{
+    --size: 30px;
+  }
+}
+
+/* https://www.freecodecamp.org/news/css-radial-gradient/ */
