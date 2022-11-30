@@ -37,6 +37,7 @@ import './css/overscroll.css'
 import './css/transform.css'
 import './css/radial.css'
 import './css/blend.css'
+import './css/shape.css'
 
 // Light/Dark Button
 const button = document.querySelector('#button-theme')

@@ -1,0 +1,67 @@
+/* Constant shapes  */
+
+:root {
+  --circle-height: 55px;
+  --circle-width: 50px;
+}
+
+/* the container need to be flex */
+.shapes {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.shape {
+  width: var(--circle-width);
+  height: var(--circle-height);
+}
+
+.wrong-circle {
+  background-color: #bc83e3;
+
+  /* with just 50% to create a circle if the height and width is not exactly the same size, the circle will look like a oval shape, will be stretch */
+  border-radius: 50%;
+}
+
+.circle {
+  background-color: #70b9cc;
+
+  /* aspect ratio 1/1 makes the width and height be always the same size */
+  aspect-ratio: 1/1;
+
+  /* we need to tell the circle to increase his size based on the content inside of it, so we use the max-content for the width and the height will be increased based on the width */
+  height: 100%;
+  width: max-content;
+
+  /* without padding the text will be larger than the circle, the shape of the div is a square and the text only respect the size of the square */
+  padding: 0.5rem;
+
+  /* centralize the text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  border-radius: 50%;
+}
+
+.circle div{
+  /* Not needed, but without paragraph the text will be in one line and the circle will be too large */
+  max-width: 12ch;
+}
+
+.pill {
+  /* Horizontal pill larger width and vw for the border-radius */
+  /* Vertical pill larger height and vh for the border-radius */
+  width: 80px;
+  height: 50px;
+
+  background-color: #87c7a1;
+
+  border-radius: 100vw;
+}

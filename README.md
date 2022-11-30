@@ -1608,3 +1608,56 @@ button:active{
 ```
 
 </details>
+
+<details>
+  <summary>Constant Shapes</summary>
+
+```HTML
+<div class="shapes">
+    <div class="circle">
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, nisi?</div>
+    </div>
+    <div class="pill"></div>
+</div>
+```
+
+```CSS
+.shapes {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.circle {
+  background-color: blue;
+
+  aspect-ratio: 1/1;
+
+  height: 100%;
+  width: max-content;
+
+  padding: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  border-radius: 50%;
+}
+
+.pill {
+  width: 80px;
+  height: 50px;
+
+  background-color: green;
+
+  border-radius: 100vw;
+}
+```
+
+</details>
