@@ -1,0 +1,21 @@
+/* Kevin Powell https://www.youtube.com/watch?v=6Nv0weHy7t0&disableadblock=1  */
+/* Container Queries for responsive text */
+
+#container_queries{
+  width: 100%;
+}
+
+#container_queries .box{
+  width: 50%;
+
+  padding: 0.25rem 1rem;
+
+  /* define the contaienr type as inline-size, so we only look after the inline axis size(width) and applies the layout/size to the element */
+  container-type: inline-size;
+}
+
+/* containers are really useful for responsive layouts */
+#container_queries p{
+  /* with the container using inline-size we can use the CQI = 1% of a query container's inline size */
+  font-size: clamp(1rem, 15cqi, 2rem);
+}

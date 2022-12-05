@@ -1661,3 +1661,24 @@ button:active{
 ```
 
 </details>
+
+<details>
+  <summary>Constant Shapes</summary>
+
+```HTML
+<div class="box">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, aspernatur.</p>
+</div>
+```
+
+```CSS
+.box{
+  container-type: inline-size;
+}
+
+.box p{
+  font-size: clamp(1rem, 15cqi, 2rem);
+}
+```
+
+</details>
