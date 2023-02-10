@@ -1682,3 +1682,102 @@ button:active{
 ```
 
 </details>
+
+<details>
+  <summary>Animated Border</summary>
+
+```HTML
+<button class="glow-effect">
+    Hello There
+    <svg class="glow-container">
+        <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+        <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+    </svg>
+</button>
+```
+
+```CSS
+.glow-effect {
+  position: relative;
+
+  border-radius: 16px;
+
+  --container-offset: 30px;
+  --glow-line-length: 20px;
+}
+
+.glow-container {
+  position: absolute;
+  inset: calc(-1 * var(--container-offset) / 2);
+
+  width: calc(100% + var(--container-offset));
+  height: calc(100% + var(--container-offset));
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+.glow-blur,
+.glow-line {
+  width: calc(100% - var(--container-offset));
+  height: calc(100% - var(--container-offset));
+
+  x: calc(var(--container-offset) / 2);
+  y: calc(var(--container-offset) / 2);
+
+  fill: transparent;
+  stroke-dasharray: var(--glow-line-length) calc(50px - var(--glow-line-length));
+}
+
+.glow-effect:is(:hover, :focus) :is(.glow-blur, .glow-line) {
+  stroke-dashoffset: -100px;
+
+  transition: stroke-dashoffset 1000ms ease-in;
+}
+
+.glow-line {
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+.glow-blur {
+  filter: blur(5px);
+  stroke-width: 2px;
+  stroke: #fff;
+}
+
+.glow-effect:is(:hover, :focus) .glow-container {
+  animation: glow-visibility ease-in-out var(--animation-speed);
+}
+
+@keyframes glow-visibility {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  25%,
+  75% {
+    opacity: 1;
+  }
+}
+
+```
+
+```Javascript
+
+const glowButtons = document.querySelectorAll('.glow-effect')
+
+glowButtons.forEach((glowButton) => {
+  const glowLines = glowButton.querySelectorAll('rect')
+  const rx = getComputedStyle(glowButton).borderRadius
+
+  glowLines.forEach((line) => {
+    line.setAttribute('rx', rx)
+  })
+})
+
+```
+
+</details>

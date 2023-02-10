@@ -59,6 +59,7 @@
             <li role="none"><a role="menuitem" class="nav-link" href="#gap">Gap</a></li>
             <li role="none"><a role="menuitem" class="nav-link" href="#grayscale">Grayscale</a></li>
             <li role="none"><a role="menuitem" class="nav-link" href="#gradient">Gradient Border</a></li>
+            <li role="none"><a role="menuitem" class="nav-link" href="#animated_borders">Animated Border</a></li>
             <li role="none"><a role="menuitem" class="nav-link" href="#video">Embed Video</a></li>
             <li role="none"><a role="menuitem" class="nav-link" href="#support">@Supports</a></li>
             <li role="none"><a role="menuitem" class="nav-link" href="#table">Table Responsive</a></li>
@@ -350,6 +351,18 @@
         <h3>Gradient Border</h3>
 
         <div class="gradient-border">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</div>
+      </section>
+
+      <section class="wrapper" id="animated_borders">
+        <h3>Animated Borders</h3>
+        <button class="glow-effect button">
+          Hello There
+          <svg class="glow-container">
+            <!-- pathLength is needed so we can use dasharray more easily in CSS -->
+            <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+            <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+          </svg>
+        </button>
       </section>
 
       <section class="wrapper" id="video">

@@ -1,44 +1,45 @@
-import './css/main.css'
-import './css/typing-effect.css'
-import './css/drop-shadow.css'
-import './css/custom-cursor.css'
-import './css/truncate-text.css'
-import './css/custom-selection.css'
-import './css/resize.css'
-import './css/modal.css'
-import './css/empty-element.css'
-import './css/custom-scrollbar.css'
-import './css/sticky.css'
-import './css/tooltip.css'
+import './css/accent.css'
+import './css/animated-borders.css'
+import './css/blend.css'
 import './css/caret.css'
-import './css/range.css'
+import './css/checkbox.css'
+import './css/clamp.css'
+import './css/container.css'
+import './css/custom-cursor.css'
+import './css/custom-label.css'
+import './css/custom-scrollbar.css'
+import './css/custom-selection.css'
+import './css/drop-shadow.css'
+import './css/dropdown-menu.css'
+import './css/empty-element.css'
 import './css/fancy.css'
+import './css/focus.css'
 import './css/gap.css'
-import './css/grayscale.css'
 import './css/gradient-border.css'
-import './css/video.css'
+import './css/grayscale.css'
+import './css/inherit.css'
 import './css/list.css'
+import './css/main.css'
+import './css/mask.css'
+import './css/modal.css'
+import './css/no-selection.css'
+import './css/outline.css'
+import './css/overscroll.css'
+import './css/radial.css'
+import './css/range.css'
+import './css/resize.css'
+import './css/select.css'
+import './css/shape.css'
+import './css/sticky.css'
 import './css/support.css'
 import './css/table.css'
-import './css/clamp.css'
-import './css/focus.css'
-import './css/dropdown-menu.css'
-import './css/select.css'
-import './css/checkbox.css'
-import './css/inherit.css'
-import './css/outline.css'
-import './css/mask.css'
-import './css/no-selection.css'
 import './css/toggle.css'
-import './css/custom-label.css'
-import './css/writing-mode.css'
-import './css/accent.css'
-import './css/overscroll.css'
+import './css/tooltip.css'
 import './css/transform.css'
-import './css/radial.css'
-import './css/blend.css'
-import './css/shape.css'
-import './css/container.css'
+import './css/truncate-text.css'
+import './css/typing-effect.css'
+import './css/video.css'
+import './css/writing-mode.css'
 
 // Light/Dark Button
 const button = document.querySelector('#button-theme')
@@ -121,4 +122,16 @@ document.querySelector('#button-h').addEventListener('click', () => {
   writingWrapper.classList.remove('vertical-left')
 
   writingWrapper.classList.add('horizontal')
+})
+
+// set the rx for glow svg, the rx is the border-radius for svg
+const glowButtons = document.querySelectorAll('.glow-effect')
+
+glowButtons.forEach((glowButton) => {
+  const glowLines = glowButton.querySelectorAll('rect')
+  const rx = getComputedStyle(glowButton).borderRadius
+
+  glowLines.forEach((line) => {
+    line.setAttribute('rx', rx)
+  })
 })

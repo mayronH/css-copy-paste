@@ -1,0 +1,118 @@
+/* Animated Glowing Borders */
+/* https://www.youtube.com/watch?v=fcnDBP3k3BE&disableadblock=1  */
+
+/* RESET */
+#animated_borders button:hover {
+  transform: none;
+}
+
+#animated_borders {
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+}
+
+.glow-effect {
+  position: relative;
+
+  border-radius: 1rem!important;
+
+  --container-offset: 30px;
+  --glow-color-dark: #ff7b00;
+  --glow-color-light: #77c1ec;
+  --glow-stroke-width: 2px;
+
+  --glow-blur-color-dark: #fca14d;
+  --glow-blur-color-light: #77c1ec;
+  --glow-blur-size: 5px;
+
+  --animation-speed: 1200ms;
+  --glow-line-length: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .glow-effect {
+    --glow-color: var(--glow-color-dark);
+    --glow-blur-color: var(--glow-blur-color-dark);
+  }
+}
+@media (prefers-color-scheme: light) {
+  .glow-effect {
+    --glow-color: var(--glow-color-light);
+    --glow-blur-color: var(--glow-blur-color-light);
+  }
+}
+
+[color-scheme='dark'] {
+  --glow-color: var(--glow-color-dark);
+  --glow-blur-color: var(--glow-blur-color-dark);
+}
+[color-scheme='light'] {
+  --glow-color: var(--glow-color-light);
+  --glow-blur-color: var(--glow-blur-color-light);
+}
+
+/* making the svg bigger than the button so we can see the blur effect outside of the button border */
+.glow-container {
+  position: absolute;
+  inset: calc(-1 * var(--container-offset) / 2);
+
+  width: calc(100% + var(--container-offset));
+  height: calc(100% + var(--container-offset));
+
+  opacity: 0;
+
+  /* disable events, the size of the container is bigger than the button */
+  pointer-events: none;
+}
+
+.glow-blur,
+.glow-line {
+  /* making the rectangles same size as the button */
+  width: calc(100% - var(--container-offset));
+  height: calc(100% - var(--container-offset));
+
+  /* svg property to set the position */
+  x: calc(var(--container-offset) / 2);
+  y: calc(var(--container-offset) / 2);
+
+  /* making the rectangles with only borders  */
+  fill: transparent;
+  /* using the pathLength to create a smaller border */
+  /* is always 2 values, a value for the line and the max 50px for "no-line" */
+  stroke-dasharray: var(--glow-line-length) calc(50px - var(--glow-line-length));
+}
+
+/* the border animation */
+.glow-effect:is(:hover, :focus) :is(.glow-blur, .glow-line) {
+  stroke-dashoffset: -120px;
+
+  transition: stroke-dashoffset var(--animation-speed) ease-in;
+}
+
+.glow-line {
+  stroke: var(--glow-color);
+  stroke-width: var(--glow-stroke-width);
+}
+
+.glow-blur {
+  filter: blur(var(--glow-blur-size));
+  stroke-width: var(--glow-blur-size);
+  stroke: var(--glow-blur-color);
+}
+
+.glow-effect:is(:hover, :focus) .glow-container {
+  animation: glow-visibility ease-in-out var(--animation-speed);
+}
+
+@keyframes glow-visibility {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  25%,
+  75% {
+    opacity: 1;
+  }
+}
