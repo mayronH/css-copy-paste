@@ -90,6 +90,9 @@
             <li role="none">
               <a role="menuitem" class="nav-link" href="#shapes">Constant Shapes</a>
             </li>
+            <li role="none">
+              <a role="menuitem" class="nav-link" href="#dialog">HTML Modal Dialog</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -572,7 +575,20 @@
           <div class="shape pill"></div>
         </div>
       </section>
+      <section class="wrapper" id="dialog">
+        <h3>HTML Modal with Dialog</h3>
+        <a class="button" onclick="my_modal.showModal()">Open Modal</a>
+      </section>
     </main>
+
+    <dialog class="dialog" id="my_modal">
+      <h2>I'm HTML Modal</h2>
+      <p>HTML only modal with ::backdrop CSS pseudo element and showModal()/close() JS functions</p>
+      <p>It's possible to use with forms too with method="dialog", when the form is submitted the dialog closes</p>
+      <footer>
+        <a class="button" onclick="my_modal.close()">close</a>
+      </footer>
+    </dialog>
 
     <script type="module" src="/main.js"></script>
 

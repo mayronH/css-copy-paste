@@ -40,6 +40,7 @@ import './css/truncate-text.css'
 import './css/typing-effect.css'
 import './css/video.css'
 import './css/writing-mode.css'
+import './css/dialog.css'
 
 // Light/Dark Button
 const button = document.querySelector('#button-theme')

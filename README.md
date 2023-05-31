@@ -1781,3 +1781,40 @@ glowButtons.forEach((glowButton) => {
 ```
 
 </details>
+
+<details>
+  <summary>HTML Modal</summary>
+
+```HTML
+<a onclick="my_modal.showModal()">Open Modal</a>
+<dialog class="dialog" id="my_modal">
+  <h2>I'm HTML Modal</h2>
+  <p>HTML only modal with ::backdrop CSS pseudo element and showModal()/close() JS functions</p>
+  <p>It's possible to use with forms too with method="dialog", when the form is submitted the dialog closes</p>
+  <footer>
+    <a onclick="my_modal.close()">close</a>
+  </footer>
+</dialog>
+```
+
+```CSS
+.dialog {
+  display: block;
+
+  transition: all 0.4s;
+  opacity: 0;
+
+  margin: auto;
+}
+
+.dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog[open]{
+  opacity: 1;
+}
+
+```
+
+</details>
