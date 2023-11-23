@@ -49,11 +49,28 @@ select {
     font: inherit;
 } */
 
+/* Better img defaults */
 img,
 picture {
   /* Responsive image */
   max-width: 100%;
-  display: block;
+  height: auto;
+
+  /* Instead of display block use vertical-align middle and the image is still inline-block */
+  vertical-align: middle;
+  /* Change the alt text when the image is not loaded to italic */
+  font-style: italic;
+
+  /* Technique for lazy loading images, for this property make difference others things is needed:
+    - low res image for the lazy loading
+    - background-image with the low res version
+    - preload the low res image
+  */
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* Default shape-margin for floating images */
+  shape-margin: 0.5rem;
 }
 
 /* End of Reset */

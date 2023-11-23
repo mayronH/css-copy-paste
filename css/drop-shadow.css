@@ -3,6 +3,8 @@
   /* Instead of using box-shadow in images, that generate a rectangular shadow in the image box, drop-shadow generate a shadow in the image */
   -webkit-filter: drop-shadow(0px 0px 8px var(--shadow));
   filter: drop-shadow(0px 0px 8px var(--shadow));
+
+  max-width: 150px;
 }
 
 /* https://markodenic.com/css-tips/ */
