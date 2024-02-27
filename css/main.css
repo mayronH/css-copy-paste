@@ -28,6 +28,12 @@
 
 /* Color Scheme */
 
+html{
+  /* Kevin Powell https://youtu.be/zFFuV_vXNhY */
+  /* Easy way to match the preferred color scheme */
+  color-scheme: dark light;
+}
+
 /* GENERAL */
 
 /* CSS Reset */
@@ -389,6 +395,7 @@ footer a {
 /* Root variables for the dark/light themes */
 
 [color-scheme='dark'] {
+  color-scheme: dark;
   --text: var(--text-dark);
   --body: var(--body-dark);
   --scrollbar-track: var(--scrollbar-track-dark);
@@ -401,6 +408,7 @@ footer a {
 }
 
 [color-scheme='light'] {
+  color-scheme: light;
   --text: var(--text-light);
   --body: var(--body-light);
   --scrollbar-track: var(--scrollbar-track-light);
